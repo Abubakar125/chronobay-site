@@ -9,6 +9,43 @@ import { Component } from '@angular/core';
 export class AppComponent {
   openFaqIndex: number | null = 0;
 
+  brands = [
+    { name: 'Tissot',  logo: 'images/brand-tissot.svg'  },
+    { name: 'Rado',    logo: 'images/brand-rado.svg'    },
+    { name: 'Omega',   logo: 'images/brand-omega.svg'   },
+    { name: 'Cartier', logo: 'images/brand-cartier.svg' },
+    { name: 'Seiko',   logo: 'images/brand-seiko.svg'   },
+    { name: 'Citizen', logo: 'images/brand-citizen.svg' },
+    { name: 'Casio',   logo: 'images/brand-casio.svg'   },
+    { name: 'Timex',   logo: 'images/brand-timex.svg'   },
+  ];
+
+  stats = [
+    { value: '0%',   label: 'Commission',      sub: 'Always' },
+    { value: '100%', label: 'Verified Members', sub: 'No Exceptions' },
+    { value: '50+',  label: 'Countries',        sub: 'Worldwide' },
+    { value: '24/7', label: 'Marketplace',      sub: 'Always Open' },
+  ];
+
+  steps = [
+    { num: '01', title: 'Verify Identity',       desc: 'Complete a secure identity check powered by UAE PASS. Your credentials are verified once — then you\'re in for life.' },
+    { num: '02', title: 'List Or Discover',      desc: 'List your timepieces with reference-number autofill and market-accurate pricing, or browse thousands of verified pieces.' },
+    { num: '03', title: 'Negotiate Directly',    desc: 'Connect peer-to-peer with verified buyers and sellers. No intermediaries, no commissions, no friction.' },
+    { num: '04', title: 'Complete Transaction',  desc: 'Close deals with confidence through our secure escrow-guided transaction framework built for high-value trades.' },
+  ];
+
+  testimonials = [
+    { quote: 'Chronobay has transformed how I manage inventory. The reference autofill alone saves me hours each week, and selling without commission has significantly improved our margins.', name: 'Ahmed Al Rashid', role: 'Professional Dealer · Dubai, UAE',  initial: 'A' },
+    { quote: 'I\'ve purchased three pieces through Chronobay and every transaction was seamless. The market data gave me the confidence to know exactly what I was paying was fair.',          name: 'Marco Ferretti',  role: 'Private Collector · Milan, Italy', initial: 'M' },
+    { quote: 'The verification layer is what sets Chronobay apart. As someone who advises ultra-HNW clients on horology, trust is everything — and this platform has earned it.',              name: 'James Whitmore',  role: 'Industry Expert · London, UK',    initial: 'J' },
+  ];
+
+  articles = [
+    { category: 'Market Analysis',   title: 'The Rolex Submariner\'s Three Decade Bull Run: What History Tells Us',                    date: 'Jun 21, 2026' },
+    { category: 'Collector\'s Guide', title: 'Audemars Piguet Royal Oak: A Complete Reference Guide For Serious Buyers',               date: 'May 30, 2026' },
+    { category: 'Platform Update',   title: 'Introducing WatchCharts™ Integration: Live Market Data Inside Every Listing',             date: 'May 22, 2026' },
+  ];
+
   faqs = [
     {
       q: 'Who can join Chronobay?',

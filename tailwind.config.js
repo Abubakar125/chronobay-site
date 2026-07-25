@@ -10,7 +10,7 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
       },
       colors: {
-        'cb-green': '#0a382b',
+        'cb-green': '#082a21',
         'cb-gold': '#b08527',
         'cb-cream': '#f7f5f1',
       },
