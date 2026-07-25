@@ -18,6 +18,7 @@ export class AppComponent {
     { name: 'Citizen', logo: 'images/brand-citizen.svg' },
     { name: 'Casio',   logo: 'images/brand-casio.svg'   },
     { name: 'Timex',   logo: 'images/brand-timex.svg'   },
+    { name: 'Rolex',   logo: 'images/brand-rolex.svg'   },
   ];
 
   stats = [
