@@ -1,0 +1,36 @@
+<section class="comparison">
+  <div class="comparison__inner">
+    <div class="comparison__header">
+      <p class="section-label">The Difference</p>
+      <h2 class="comparison__heading font-cormorant">Chronobay vs. Everyone Else</h2>
+    </div>
+
+    <div class="comparison__card glass-card">
+      <div class="glass-card-content comparison__table">
+
+        <!-- Header row -->
+        <div class="comparison__row comparison__row--head">
+          <span class="comparison__col-feature">Feature</span>
+          <span class="comparison__col-us font-cormorant">Chronobay</span>
+          <span class="comparison__col-them">Others</span>
+        </div>
+
+        @for (row of rows; track row.feature) {
+          <div class="comparison__row">
+            <span class="comparison__col-feature comparison__feature-text">{{ row.feature }}</span>
+            <span class="comparison__col-us">
+              @if (row.usIsCheck) {
+                <img src="icon/why/why-check.svg" alt="Yes" class="comparison__check" width="18" height="18" />
+              } @else {
+                <span class="comparison__us-val font-cormorant">{{ row.us }}</span>
+              }
+            </span>
+            <span class="comparison__col-them comparison__them-val">{{ row.them }}</span>
+          </div>
+        }
+
+      </div>
+      <div class="glass-card-shine"></div>
+    </div>
+  </div>
+</section>

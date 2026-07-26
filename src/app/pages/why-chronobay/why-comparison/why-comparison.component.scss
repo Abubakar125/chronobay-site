@@ -1,0 +1,111 @@
+.comparison {
+  background: #082a21;
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 48px);
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  &__heading {
+    margin: 20px 0 0;
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #f7f5f1;
+    text-align: center;
+  }
+
+  &__card {
+    width: 100%;
+  }
+
+  &__table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 160px 160px;
+    align-items: center;
+    border-bottom: 0.845px solid rgba(255, 255, 255, 0.04);
+    padding: 0 40px;
+    min-height: 72px;
+
+    &--head {
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom-color: rgba(255, 255, 255, 0.06);
+      min-height: 76px;
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr 90px 90px;
+      padding: 0 20px;
+    }
+  }
+
+  &__col-feature {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: rgba(247, 245, 241, 0.25);
+  }
+
+  &__col-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #b08527;
+    text-align: center;
+  }
+
+  &__col-them {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(247, 245, 241, 0.25);
+    text-align: center;
+  }
+
+  &__feature-text {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: rgba(247, 245, 241, 0.65);
+  }
+
+  &__us-val {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: #b08527;
+  }
+
+  &__them-val {
+    font-size: 18px;
+    color: rgba(247, 245, 241, 0.15);
+  }
+
+  &__check {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+}

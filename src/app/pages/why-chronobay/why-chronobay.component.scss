@@ -1,0 +1,228 @@
+.why-page {
+  background: #082a21;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #f7f5f1;
+}
+
+.why-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8, 42, 33, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  &__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 48px);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__left {
+    display: none;
+    align-items: center;
+    gap: 8px;
+
+    @media (min-width: 640px) {
+      display: flex;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    transition: background 0.2s ease;
+
+    img {
+      width: 13px;
+      height: 13px;
+      object-fit: contain;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: auto;
+    text-decoration: none;
+  }
+
+  &__logo-img {
+    height: 40px;
+    width: auto;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__cta {
+    display: none;
+
+    @media (min-width: 1024px) {
+      display: inline-flex;
+    }
+  }
+
+  &__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__bar {
+    display: block;
+    height: 1px;
+    background: #f7f5f1;
+    border-radius: 2px;
+
+    &--long { width: 15px; }
+    &--short { width: 10px; }
+  }
+}
+
+.why-footer {
+  background: #061b16;
+  padding: 45px 24px 60px;
+
+  &__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  &__location {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(247, 245, 241, 0.25);
+    letter-spacing: 0.08em;
+  }
+
+  &__copy {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(247, 245, 241, 0.2);
+    letter-spacing: 0.05em;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(247, 245, 241, 0.35);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #f7f5f1;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    transition: background 0.2s ease;
+
+    img {
+      width: 15px;
+      height: 15px;
+      object-fit: contain;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+}

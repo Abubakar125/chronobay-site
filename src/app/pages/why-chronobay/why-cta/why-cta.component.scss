@@ -1,0 +1,58 @@
+.why-cta {
+  position: relative;
+  background: linear-gradient(to bottom, #061e18, #082a21);
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 48px);
+  overflow: hidden;
+  text-align: center;
+
+  &__glow {
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(ellipse at 50% 50%, rgba(176, 133, 39, 0.06) 0%, transparent 70%);
+    filter: blur(60px);
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__heading {
+    margin: 20px 0 0;
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #f7f5f1;
+
+    em {
+      font-style: italic;
+      color: #b08527;
+    }
+  }
+
+  &__sub {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(14px, 1.8vw, 18px);
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(247, 245, 241, 0.5);
+    max-width: 600px;
+  }
+
+  &__actions {
+    margin-top: 8px;
+  }
+}

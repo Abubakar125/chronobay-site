@@ -1,8 +1,10 @@
 import { Component, OnDestroy, effect, input, output, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.scss'
 })
@@ -37,14 +39,14 @@ export class NavMenuComponent implements OnDestroy {
   }
 
   readonly links = [
-    { label: 'Home',                 gold: false },
-    { label: 'Why Chronobay',        gold: false },
-    { label: 'App',                  gold: false },
-    { label: 'How It Works',         gold: false },
-    { label: 'Journal',              gold: false },
-    { label: 'Newsletter',           gold: false },
-    { label: 'Login',                gold: false },
-    { label: 'Apply For Membership', gold: true  },
-    { label: 'Download App',         gold: true  },
+    { label: 'Home',                 route: '/',               gold: false },
+    { label: 'Why Chronobay',        route: '/why-chronobay',  gold: false },
+    { label: 'App',                  route: null,              gold: false },
+    { label: 'How It Works',         route: null,              gold: false },
+    { label: 'Journal',              route: null,              gold: false },
+    { label: 'Newsletter',           route: null,              gold: false },
+    { label: 'Login',                route: null,              gold: false },
+    { label: 'Apply For Membership', route: null,              gold: true  },
+    { label: 'Download App',         route: null,              gold: true  },
   ];
 }

@@ -1,0 +1,89 @@
+@if (isMenuOpen()) {
+  <app-nav-menu [isOpen]="isMenuOpen()" (closed)="isMenuOpen.set(false)" />
+}
+
+<div class="why-page">
+  <!-- Top navbar -->
+  <div class="why-navbar">
+    <div class="why-navbar__inner">
+      <div class="why-navbar__left">
+        <a href="#" aria-label="Instagram" class="why-navbar__social">
+          <img src="icon/insta.png" alt="" width="13" height="13" />
+        </a>
+        <a href="#" aria-label="Twitter" class="why-navbar__social">
+          <img src="icon/twitter.png" alt="" width="13" height="13" />
+        </a>
+        <a href="#" aria-label="LinkedIn" class="why-navbar__social">
+          <img src="icon/linkedIn.png" alt="" width="13" height="13" />
+        </a>
+        <a href="#" aria-label="YouTube" class="why-navbar__social">
+          <img src="icon/youtube.png" alt="" width="13" height="13" />
+        </a>
+      </div>
+
+      <a routerLink="/" class="why-navbar__logo">
+        <img src="images/logo.svg" alt="Chronobay" class="why-navbar__logo-img" />
+      </a>
+
+      <div class="why-navbar__right">
+        <button class="glass-btn why-navbar__cta">Apply For Membership</button>
+        <button
+          aria-label="Account"
+          class="why-navbar__icon-btn"
+        >
+          <img src="icon/person.png" alt="" width="15" height="15" />
+        </button>
+        <button
+          aria-label="Menu"
+          class="why-navbar__menu-btn"
+          (click)="isMenuOpen.set(true)"
+        >
+          <span class="why-navbar__bar why-navbar__bar--long"></span>
+          <span class="why-navbar__bar why-navbar__bar--short"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-why-hero />
+  <app-why-stats-bar />
+  <app-why-reasons />
+  <app-why-comparison />
+  <app-why-testimonials />
+  <app-why-audience />
+  <app-why-cta />
+
+  <!-- Footer (shared) -->
+  <footer class="why-footer">
+    <div class="why-footer__inner">
+      <div class="why-footer__row">
+        <div class="why-footer__brand">
+          <img src="images/logo.svg" alt="Chronobay" class="why-footer__logo" />
+          <p class="why-footer__location">Dubai, UAE · Private Marketplace</p>
+          <p class="why-footer__copy">© 2026 Chronobay. All rights reserved.</p>
+        </div>
+        <nav class="why-footer__nav">
+          <a href="#" class="why-footer__link">Privacy Policy</a>
+          <a href="#" class="why-footer__link">Terms</a>
+          <a href="#" class="why-footer__link">Support</a>
+          <a href="#" class="why-footer__link">Journal</a>
+          <a href="#" class="why-footer__link">Newsletter</a>
+        </nav>
+        <div class="why-footer__socials">
+          <a href="#" aria-label="Instagram" class="why-footer__social">
+            <img src="icon/insta.png" alt="" width="15" height="15" />
+          </a>
+          <a href="#" aria-label="Twitter" class="why-footer__social">
+            <img src="icon/twitter.png" alt="" width="15" height="15" />
+          </a>
+          <a href="#" aria-label="LinkedIn" class="why-footer__social">
+            <img src="icon/linkedIn.png" alt="" width="15" height="15" />
+          </a>
+          <a href="#" aria-label="YouTube" class="why-footer__social">
+            <img src="icon/youtube.png" alt="" width="15" height="15" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
