@@ -107,17 +107,17 @@
 
 .brand-logo-tile {
   flex-shrink: 0;
-  width: 197px;
-  height: 107px;
+  width: 130px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #0A382B;
-  border-radius: 18px;
+  border-radius: 12px;
 
   img {
-    max-width: 110px;
-    max-height: 44px;
+    max-width: 72px;
+    max-height: 28px;
     object-fit: contain;
     opacity: 0.85;
     transition: opacity 0.2s ease;
@@ -127,10 +127,28 @@
     opacity: 1;
   }
 
+  @media (min-width: 640px) {
+    width: 165px;
+    height: 90px;
+    border-radius: 15px;
+
+    img {
+      max-width: 92px;
+      max-height: 37px;
+    }
+  }
+
   @media (min-width: 1280px) {
     flex: 1;
-    max-width: 230px;
     width: auto;
+    height: 107px;
+    max-width: 230px;
+    border-radius: 18px;
+
+    img {
+      max-width: 110px;
+      max-height: 44px;
+    }
   }
 }
 

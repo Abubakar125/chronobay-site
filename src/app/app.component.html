@@ -1,3 +1,9 @@
+<app-preloader />
+
+@if (isMenuOpen()) {
+  <app-nav-menu [isOpen]="isMenuOpen()" (closed)="isMenuOpen.set(false)" />
+}
+
 <div class="bg-cb-green min-h-screen font-inter text-cb-cream">
   <!-- ═══════════════════════════════════════════
        NAVBAR + HERO CARD
@@ -92,6 +98,7 @@
             <button
               aria-label="Menu"
               class="w-9 h-9 xl:w-11 xl:h-11 flex flex-col items-center justify-center gap-[5px] bg-[rgba(255,255,255,0.06)] border border-[rgba(255,255,255,0.1)] rounded-[22px] transition-colors hover:bg-[rgba(255,255,255,0.1)]"
+              (click)="isMenuOpen.set(true)"
             >
               <span
                 class="block w-[15px] xl:w-[18px] h-px bg-cb-cream rounded-[2px]"
@@ -189,7 +196,7 @@
           >
             <a
               href="#"
-              class="block w-[104px] h-[34px] sm:w-[120px] sm:h-[40px] xl:w-[144px] xl:h-[48px]"
+              class="block w-[70px] h-[34px] sm:w-[120px] sm:h-[40px] xl:w-[144px] xl:h-[48px]"
             >
               <img
                 src="images/ios-store.png"
@@ -199,7 +206,7 @@
             </a>
             <a
               href="#"
-              class="block w-[104px] h-[34px] sm:w-[120px] sm:h-[40px] xl:w-[144px] xl:h-[48px]"
+              class="block w-[70px] h-[34px] sm:w-[120px] sm:h-[40px] xl:w-[144px] xl:h-[48px]"
             >
               <img
                 src="images/play-store.png"

@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { PreloaderComponent } from './preloader/preloader.component';
+import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [PreloaderComponent, NavMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  isMenuOpen = signal(false);
   openFaqIndex: number | null = 0;
 
   brands = [

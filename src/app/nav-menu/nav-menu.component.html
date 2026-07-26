@@ -1,0 +1,29 @@
+<div class="nav-overlay" [class.nav-overlay--visible]="visible()" (click)="close()">
+  <div class="nav-panel" (click)="$event.stopPropagation()">
+
+    <!-- Close button -->
+    <button class="nav-close" aria-label="Close menu" (click)="close()">
+      <div class="nav-close__icon">
+        <img src="icon/nav-close.svg" alt="" width="20" height="20" />
+      </div>
+    </button>
+
+    <!-- Navigation links -->
+    <nav class="nav-links">
+      @for (link of links; track link.label; let i = $index) {
+        <a
+          href="#"
+          class="nav-link"
+          [class.nav-link--gold]="link.gold"
+          [style.animation-delay]="visible() ? i * 55 + 'ms' : '0ms'"
+          [class.nav-link--animate]="visible()"
+          (click)="close()"
+        >{{ link.label }}</a>
+      }
+    </nav>
+
+    <!-- Bottom tagline -->
+    <p class="nav-tagline">Dubai, UAE · Private Marketplace</p>
+
+  </div>
+</div>
