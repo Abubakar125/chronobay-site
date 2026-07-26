@@ -37,14 +37,29 @@ export class AppComponent {
 
   testimonials = [
     { quote: 'Chronobay has transformed how I manage inventory. The reference autofill alone saves me hours each week, and selling without commission has significantly improved our margins.', name: 'Ahmed Al Rashid', role: 'Professional Dealer · Dubai, UAE',  initial: 'A' },
-    { quote: 'I\'ve purchased three pieces through Chronobay and every transaction was seamless. The market data gave me the confidence to know exactly what I was paying was fair.',          name: 'Marco Ferretti',  role: 'Private Collector · Milan, Italy', initial: 'M' },
-    { quote: 'The verification layer is what sets Chronobay apart. As someone who advises ultra-HNW clients on horology, trust is everything — and this platform has earned it.',              name: 'James Whitmore',  role: 'Industry Expert · London, UK',    initial: 'J' },
+    { quote: 'I\'ve purchased three pieces through Chronobay and every transaction was seamless. The market data gave me the confidence to know exactly what I was paying was fair.',          name: 'Marco Ferretti',  role: 'Private Collector · Dubai, UAE',    initial: 'M' },
+    { quote: 'The verification layer is what sets Chronobay apart. As someone who advises ultra-HNW clients on horology, trust is everything — and this platform has earned it.',              name: 'James Whitmort',  role: 'Industry Expert · Dubai, UAE',      initial: 'J' },
   ];
 
   articles = [
-    { category: 'Market Analysis',   title: 'The Rolex Submariner\'s Three Decade Bull Run: What History Tells Us',                    date: 'Jun 21, 2026' },
-    { category: 'Collector\'s Guide', title: 'Audemars Piguet Royal Oak: A Complete Reference Guide For Serious Buyers',               date: 'May 30, 2026' },
-    { category: 'Platform Update',   title: 'Introducing WatchCharts™ Integration: Live Market Data Inside Every Listing',             date: 'May 22, 2026' },
+    {
+      category: 'Market Analysis',
+      title: 'The Rolex Submariner\'s Three Decade Bull Run: What History Tells Us',
+      excerpt: 'A deep dive into how the world\'s most recognisable sports watch became the benchmark for pre-owned luxury timepiece investment.',
+      date: 'Jun 21, 2026',
+    },
+    {
+      category: 'Collector\'s Guide',
+      title: 'Audemars Piguet Royal Oak: A Complete Reference For Serious Buyers',
+      excerpt: 'Everything a serious buyer needs to know about navigating references, generations, and valuations for one of horology\'s most iconic pieces.',
+      date: 'May 30, 2026',
+    },
+    {
+      category: 'Platform Update',
+      title: 'Introducing WatchCharts™ Integration: Live Market Data Inside Every Listing',
+      excerpt: 'Real-time market valuations, historical price charts, and reference data now embedded directly into every Chronobay listing.',
+      date: 'May 22, 2026',
+    },
   ];
 
   faqs = [

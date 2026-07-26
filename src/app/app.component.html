@@ -247,7 +247,7 @@
   <section class="mt-6">
     <div class="overflow-x-auto">
       <div
-        class="flex items-center gap-[17px] min-w-max xl:min-w-0 xl:w-full px-[17px] xl:px-5"
+        class="flex items-center justify-center gap-[17px] min-w-max xl:min-w-0 xl:w-full px-[17px] xl:px-5"
       >
         @for (brand of brands; track brand.name) {
           <div class="brand-logo-tile">
@@ -891,22 +891,22 @@
   <!-- ═══════════════════════════════════════════
        HOW IT WORKS
   ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4">
+  <section class="pt-24 py-36 px-4 bg-[#0b1d18]">
     <div class="max-w-[1400px] mx-auto">
       <div class="text-center mb-20">
         <p class="section-label mb-4">The Process</p>
         <h2
           class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[64px] leading-[1.05] tracking-[-0.8px]"
         >
-          How It Works
+          How It Work
         </h2>
       </div>
 
       <div class="relative">
-        <!-- Connecting line — desktop only -->
+        <!-- Connecting line — desktop only, centered on 96px circle -->
         <div
           class="hidden lg:block absolute h-px bg-[rgba(176,133,39,0.2)]"
-          style="top: 28px; left: calc(12.5% + 0px); right: calc(12.5% + 0px)"
+          style="top: 48px; left: calc(12.5% + 0px); right: calc(12.5% + 0px)"
         ></div>
 
         <div
@@ -916,17 +916,17 @@
             <div class="flex flex-col items-center text-center">
               <div class="step-circle mb-8">
                 <span
-                  class="font-cormorant font-medium text-cb-gold text-[18px] tracking-[0.5px]"
+                  class="font-cormorant font-medium text-cb-gold text-[52px] leading-[52px] tracking-[-1.04px] mb-[12px]"
                   >{{ step.num }}</span
                 >
               </div>
               <p
-                class="font-cormorant font-medium text-cb-cream text-[22px] md:text-[26px] leading-[1.2] mb-4"
+                class="font-cormorant font-medium text-cb-cream text-[28px] leading-[42px] tracking-[-0.28px] mb-3"
               >
                 {{ step.title }}
               </p>
               <p
-                class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[14px] leading-[24px] max-w-[260px]"
+                class="font-inter font-light text-[rgba(247,245,241,0.6)] text-[15px] leading-[23.8px] max-w-[280px] lg:max-w-[354px]"
               >
                 {{ step.desc }}
               </p>
@@ -940,12 +940,12 @@
   <!-- ═══════════════════════════════════════════
        TRUSTED BY THE BEST
   ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4">
+  <section class="py-24 px-4 bg-[#112822]">
     <div class="max-w-[1400px] mx-auto">
-      <div class="text-center mb-14">
-        <p class="section-label mb-4">Voices of the Community</p>
+      <div class="text-center mb-20">
+        <p class="section-label mb-5">Voice Of The Communities</p>
         <h2
-          class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]"
+          class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] xl:text-[72px] leading-[1.1] tracking-[-1.44px]"
         >
           Trusted by the Best
         </h2>
@@ -957,33 +957,39 @@
             <div class="glass-card-shine"></div>
             <div class="glass-card-content flex flex-col gap-6 flex-1">
               <!-- Stars -->
-              <div class="text-cb-gold text-[16px] tracking-[4px]">★★★★★</div>
+              <div class="flex items-center gap-[6px]">
+                <img src="icon/rating.png" alt="5 stars" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="5 stars" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="5 stars" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="5 stars" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="5 stars" class="h-[18px] w-auto object-contain" />
+              </div>
 
               <!-- Quote -->
               <p
-                class="font-cormorant font-medium italic text-cb-cream text-[18px] md:text-[20px] leading-[1.7] flex-1"
+                class="font-inter font-light text-[rgba(247,245,241,0.9)] text-[15px] leading-[23.8px] flex-1"
               >
                 "{{ t.quote }}"
               </p>
 
               <!-- Person -->
-              <div
-                class="flex items-center gap-4 pt-5 border-t border-[rgba(255,255,255,0.06)]"
-              >
+              <div class="flex items-center gap-4">
                 <div
-                  class="w-10 h-10 rounded-full bg-[rgba(176,133,39,0.12)] border border-[rgba(176,133,39,0.3)] flex items-center justify-center flex-shrink-0"
+                  class="w-11 h-11 rounded-full bg-[rgba(176,133,39,0.12)] border border-[rgba(176,133,39,0.3)] flex items-center justify-center flex-shrink-0"
                 >
                   <span
-                    class="font-cormorant font-semibold text-cb-gold text-[17px]"
+                    class="font-cormorant font-medium text-cb-gold text-[20px]"
                     >{{ t.initial }}</span
                   >
                 </div>
                 <div>
-                  <p class="font-inter font-medium text-cb-cream text-[14px]">
+                  <p
+                    class="font-cormorant font-medium text-cb-cream text-[20px] leading-[42px] tracking-[-0.28px]"
+                  >
                     {{ t.name }}
                   </p>
                   <p
-                    class="font-inter font-light text-[rgba(247,245,241,0.4)] text-[12px] tracking-[0.3px] mt-0.5"
+                    class="font-inter font-light text-[rgba(247,245,241,0.6)] text-[15px] leading-[23.8px]"
                   >
                     {{ t.role }}
                   </p>
@@ -999,39 +1005,40 @@
   <!-- ═══════════════════════════════════════════
        THE JOURNAL
   ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4">
+  <section class="pt-24 pb-36 px-4 bg-[#0C1E19]">
     <div class="max-w-[1400px] mx-auto">
       <!-- Header row -->
       <div class="flex items-end justify-between mb-12">
-        <h2
-          class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.05] tracking-[-0.6px]"
-        >
-          The Journal
-        </h2>
-        <a
-          href="#"
-          class="section-label hidden sm:block hover:text-[rgba(176,133,39,0.75)] transition-colors mb-3"
-        >
-          All Articles →
-        </a>
+        <div>
+          <p class="section-label mb-5">THE PROCESS</p>
+          <h2
+            class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] xl:text-[72px] leading-[1.05] tracking-[-1.44px]"
+          >
+            The Journal
+          </h2>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         @for (article of articles; track article.title) {
           <div class="journal-card">
             <div class="journal-img"></div>
-            <div class="p-7 pt-6">
-              <p class="section-label mb-3">{{ article.category }}</p>
+            <div class="p-7 pt-6 flex flex-col gap-4">
+              <p class="section-label">{{ article.category }}</p>
               <p
-                class="font-cormorant font-medium text-cb-cream text-[20px] md:text-[22px] leading-[1.35] mb-5"
+                class="font-cormorant font-medium text-cb-cream text-[25px] leading-[normal]"
               >
                 {{ article.title }}
               </p>
               <p
-                class="font-inter font-light text-[rgba(247,245,241,0.35)] text-[12px] tracking-[0.2px]"
+                class="font-inter font-light text-[rgba(247,245,241,0.6)] text-[15px] leading-[23.8px]"
               >
-                {{ article.date }}
+                {{ article.excerpt }}
               </p>
+              <div class="flex items-center justify-between pt-1">
+                <span class="section-label">Read More</span>
+                <span class="section-label">{{ article.date }}</span>
+              </div>
             </div>
           </div>
         }
@@ -1045,17 +1052,19 @@
   <section class="py-24 px-4">
     <div class="max-w-[1400px] mx-auto">
       <!-- Section header -->
-      <div class="text-center mb-16">
+      <div class="text-center mb-20">
         <p class="section-label mb-4">Questions</p>
         <h2
-          class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]"
+          class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] xl:text-[72px] leading-[1.1] tracking-[-1.44px]"
         >
           Frequently Asked
         </h2>
       </div>
 
-      <!-- FAQ list -->
-      <div class="max-w-[900px] mx-auto">
+      <!-- FAQ card -->
+      <div
+        class="max-w-[900px] mx-auto bg-[rgba(10,56,43,0.25)] border border-[rgba(255,255,255,0.06)] rounded-[32px] px-8 md:px-[49px] overflow-hidden shadow-[0px_32px_80px_0px_rgba(0,0,0,0.3)]"
+      >
         @for (faq of faqs; track faq.q; let i = $index) {
           <div class="faq-item">
             <button
@@ -1063,22 +1072,26 @@
               (click)="toggleFaq(i)"
             >
               <span
-                class="font-cormorant font-medium text-cb-gold text-[22px] leading-[33px] tracking-[-0.22px] pr-8"
+                class="font-cormorant font-medium text-[22px] leading-[33px] tracking-[-0.22px] pr-8"
+                [style.color]="openFaqIndex === i ? '#b08527' : '#f7f5f1'"
               >
                 {{ faq.q }}
               </span>
               <div
-                class="flex-shrink-0 w-9 h-9 flex items-center justify-center bg-[rgba(176,133,39,0.15)] border border-[rgba(176,133,39,0.3)] rounded-[18px]"
+                class="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-[18px] transition-colors"
+                [style]="openFaqIndex === i
+                  ? 'background: rgba(176,133,39,0.15); border: 0.723px solid rgba(176,133,39,0.3)'
+                  : 'background: rgba(255,255,255,0.05); border: 0.723px solid rgba(255,255,255,0.08)'"
               >
-                <img
-                  src="https://www.figma.com/api/mcp/asset/451fa8c0-e182-4ea3-a9cc-9017f83fd3b2"
-                  alt=""
-                  class="w-3.5 h-3.5 object-contain"
-                  [style.transform]="
-                    openFaqIndex === i ? 'rotate(45deg)' : 'rotate(0deg)'
-                  "
-                  style="transition: transform 0.2s ease"
-                />
+                @if (openFaqIndex === i) {
+                  <svg width="14" height="2" viewBox="0 0 14 2" fill="none">
+                    <path d="M1 1H13" stroke="#b08527" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                } @else {
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M7 1V13M1 7H13" stroke="rgba(247,245,241,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                }
               </div>
             </button>
             @if (openFaqIndex === i) {
@@ -1099,19 +1112,11 @@
   <!-- ═══════════════════════════════════════════
        CTA SECTION
   ═══════════════════════════════════════════ -->
-  <section
-    class="relative overflow-hidden"
-    style="background: linear-gradient(180deg, #082a21 0%, #061a13 100%)"
-  >
-    <div class="border-t border-[rgba(255,255,255,0.06)] py-24 px-4">
-      <!-- Decorative orb -->
-      <div
-        class="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-cb-gold opacity-[0.03] blur-[120px]"
-      ></div>
-
+  <section class="relative overflow-hidden bg-[#061B16]">
+    <div class="py-36 px-4">
       <div class="max-w-[1400px] mx-auto text-center relative">
         <!-- Label -->
-        <p class="section-label mb-6">Join the Movement</p>
+        <p class="section-label mb-6">Join the Movement.</p>
 
         <!-- Heading -->
         <h2
@@ -1120,67 +1125,63 @@
           The Future Of<br />Watch Trading.
         </h2>
 
-        <!-- Body -->
+        <!-- Subtitle -->
         <p
-          class="font-cormorant font-medium text-cb-cream text-[20px] md:text-[22px] mb-10 opacity-80"
+          class="font-cormorant italic text-cb-gold text-[20px] md:text-[24px] leading-[1.4] mb-10 opacity-75"
         >
           Zero commission. Fully verified. Completely private.
         </p>
 
         <!-- CTA button -->
-        <div class="flex justify-center mb-20">
+        <div class="flex justify-center">
           <button class="glass-btn">Apply For Membership</button>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Divider -->
-        <div class="border-t border-[rgba(255,255,255,0.06)] mb-12"></div>
+  <!-- ═══════════════════════════════════════════
+       POWERED BY INDUSTRY LEADERS
+  ═══════════════════════════════════════════ -->
+  <section class="pt-14 pb-20 px-4">
+    <div class="max-w-[1400px] mx-auto text-center">
+      <h2
+        class="font-cormorant font-medium text-cb-cream text-[32px] md:text-[40px] leading-[1.2] tracking-[-1.44px] mb-10"
+      >
+        Powered by Industry Leaders
+      </h2>
 
-        <!-- Powered by industry leaders -->
-        <p
-          class="font-cormorant font-medium text-cb-cream text-[28px] md:text-[36px] leading-[1.2] tracking-[-0.4px] mb-10"
-        >
-          Powered by Industry Leaders
-        </p>
-
-        <!-- Trust badges -->
-        <div class="flex flex-wrap items-center justify-center gap-6">
-          <div
-            class="flex flex-col items-center gap-2 px-8 py-5 bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] rounded-2xl min-w-[160px]"
-          >
-            <p
-              class="font-inter font-medium text-cb-cream text-[14px] tracking-[0.5px]"
-            >
-              UAE PASS
-            </p>
-            <p class="section-label" style="letter-spacing: 1.2px">
-              Verified Identity
-            </p>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <!-- UAE PASS -->
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <img src="images/uae-pass.svg" alt="" class=" object-contain" />
           </div>
-
-          <div
-            class="flex flex-col items-center gap-2 px-8 py-5 bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] rounded-2xl min-w-[160px]"
-          >
-            <p
-              class="font-inter font-medium text-cb-cream text-[14px] tracking-[0.5px]"
-            >
-              WatchCharts™
-            </p>
-            <p class="section-label" style="letter-spacing: 1.2px">
-              Market Intelligence
-            </p>
+          <div class="flex flex-col items-start">
+            <span class="font-inter font-medium text-[rgba(247,245,241,0.85)] text-[13px] leading-[19.5px]">UAE PASS</span>
+            <span class="font-inter font-medium text-[rgba(247,245,241,0.85)] text-[13px] leading-[19.5px]">Verified Identity</span>
           </div>
+        </div>
 
-          <div
-            class="flex flex-col items-center gap-2 px-8 py-5 bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.07)] rounded-2xl min-w-[160px]"
-          >
-            <p
-              class="font-inter font-medium text-cb-cream text-[14px] tracking-[0.5px]"
-            >
-              Chronobay
-            </p>
-            <p class="section-label" style="letter-spacing: 1.2px">
-              Zero Commission
-            </p>
+        <!-- WatchCharts -->
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <img src="images/watch-charts.svg" alt="" class=" object-contain" />
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="font-inter font-medium text-[rgba(247,245,241,0.85)] text-[13px] leading-[19.5px]">WatchCharts™</span>
+            <span class="font-inter font-medium text-[rgba(247,245,241,0.85)] text-[13px] leading-[19.5px]">Market Intelligence</span>
+          </div>
+        </div>
+
+        <!-- Chronobay -->
+        <div class="trust-badge">
+          <div class="trust-badge-icon">
+            <img src="images/chornobay-zero.svg" alt="" class=" object-contain" />
+          </div>
+          <div class="flex flex-col items-start">
+            <span class="font-inter font-medium text-[rgba(247,245,241,0.85)] text-[13px] leading-[19.5px]">Chronobay</span>
+            <span class="font-inter font-medium text-[rgba(247,245,241,0.85)] text-[13px] leading-[19.5px]">Zero Commission</span>
           </div>
         </div>
       </div>
@@ -1190,94 +1191,50 @@
   <!-- ═══════════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════════ -->
-  <footer class="border-t border-[rgba(255,255,255,0.06)] py-12 px-4">
+  <footer class="bg-[#061b16] px-4 pt-[45px] pb-[60px]">
     <div class="max-w-[1400px] mx-auto">
-      <div
-        class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
-      >
-        <!-- Logo + tagline -->
-        <div class="flex flex-col gap-2">
-          <img src="images/logo.svg" alt="Chronobay" class="h-10 w-auto" />
-          <p
-            class="font-inter font-light text-[rgba(247,245,241,0.4)] text-[13px] tracking-[0.3px] mt-1"
-          >
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-0 min-h-[88px] py-2 lg:py-0">
+
+        <!-- Left: Logo + location + copyright -->
+        <div class="flex flex-col items-start gap-[12px]">
+          <img src="images/logo.svg" alt="Chronobay" class="h-[48px] w-auto object-contain" />
+          <p class="font-inter font-normal text-[rgba(247,245,241,0.25)] text-[12px] leading-[18px] tracking-[0.08em]">
             Dubai, UAE · Private Marketplace
           </p>
-          <p
-            class="font-inter font-light text-[rgba(247,245,241,0.25)] text-[12px]"
-          >
+          <p class="font-inter font-normal text-[rgba(247,245,241,0.2)] text-[11px] leading-[16.5px] tracking-[0.05em]">
             © 2026 Chronobay. All rights reserved.
           </p>
         </div>
 
-        <!-- Nav links -->
-        <nav class="flex flex-wrap gap-x-8 gap-y-3">
-          @for (
-            link of [
-              "Privacy Policy",
-              "Terms",
-              "Support",
-              "Journal",
-              "Newsletter",
-            ];
-            track link
-          ) {
-            <a
-              href="#"
-              class="font-inter font-light text-[rgba(247,245,241,0.45)] text-[13px] hover:text-cb-cream transition-colors duration-200"
-            >
-              {{ link }}
-            </a>
-          }
+        <!-- Center: Nav links -->
+        <nav class="flex flex-wrap items-center gap-x-8 gap-y-3">
+          <a href="#" class="font-inter font-normal text-[rgba(247,245,241,0.35)] text-[12px] leading-[18px] tracking-[0.06em] hover:text-cb-cream transition-colors">Privacy Policy</a>
+          <a href="#" class="font-inter font-normal text-[rgba(247,245,241,0.35)] text-[12px] leading-[18px] tracking-[0.06em] hover:text-cb-cream transition-colors">Terms</a>
+          <a href="#" class="font-inter font-normal text-[rgba(247,245,241,0.35)] text-[12px] leading-[18px] tracking-[0.06em] hover:text-cb-cream transition-colors">Support</a>
+          <a href="#" class="font-inter font-normal text-[rgba(247,245,241,0.35)] text-[12px] leading-[18px] tracking-[0.06em] hover:text-cb-cream transition-colors">Journal</a>
+          <a href="#" class="font-inter font-normal text-[rgba(247,245,241,0.35)] text-[12px] leading-[18px] tracking-[0.06em] hover:text-cb-cream transition-colors">Newsletter</a>
         </nav>
 
-        <!-- Social icons -->
+        <!-- Right: Social icons -->
         <div class="flex items-center gap-3">
-          <a
-            href="#"
-            aria-label="Instagram"
-            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]"
-          >
-            <img
-              src="icon/insta.png"
-              alt=""
-              class="w-[15px] h-[15px] object-contain opacity-50 hover:opacity-80"
-            />
+          <a href="#" aria-label="Instagram"
+            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]">
+            <img src="icon/insta.png" alt="" class="w-[15px] h-[15px] object-contain" />
           </a>
-          <a
-            href="#"
-            aria-label="Twitter"
-            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]"
-          >
-            <img
-              src="icon/twitter.png"
-              alt=""
-              class="w-[15px] h-[15px] object-contain opacity-50 hover:opacity-80"
-            />
+          <a href="#" aria-label="Twitter"
+            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]">
+            <img src="icon/twitter.png" alt="" class="w-[15px] h-[15px] object-contain" />
           </a>
-          <a
-            href="#"
-            aria-label="LinkedIn"
-            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]"
-          >
-            <img
-              src="icon/linkedIn.png"
-              alt=""
-              class="w-[15px] h-[15px] object-contain opacity-50 hover:opacity-80"
-            />
+          <a href="#" aria-label="LinkedIn"
+            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]">
+            <img src="icon/linkedIn.png" alt="" class="w-[15px] h-[15px] object-contain" />
           </a>
-          <a
-            href="#"
-            aria-label="YouTube"
-            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]"
-          >
-            <img
-              src="icon/youtube.png"
-              alt=""
-              class="w-[15px] h-[15px] object-contain opacity-50 hover:opacity-80"
-            />
+          <a href="#" aria-label="YouTube"
+            class="w-10 h-10 flex items-center justify-center bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.07)] rounded-[20px] transition-colors hover:bg-[rgba(255,255,255,0.08)]">
+            <img src="icon/youtube.png" alt="" class="w-[15px] h-[15px] object-contain" />
           </a>
         </div>
+
       </div>
     </div>
   </footer>
