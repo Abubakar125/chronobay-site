@@ -25,7 +25,7 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    gap: 24px;
 
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
@@ -33,7 +33,7 @@
   }
 
   &__card {
-    padding: 52px;
+    padding: 53px;
   }
 
   &__card-inner {
@@ -62,7 +62,7 @@
 
   &__card-title {
     margin: 0;
-    font-size: clamp(26px, 2.5vw, 34px);
+    font-size: clamp(26px, 2.4vw, 34px);
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: -0.01em;
@@ -101,4 +101,59 @@
     line-height: 1.6;
     color: rgba(247, 245, 241, 0.55);
   }
+}
+
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #b08527;
+  letter-spacing: 1.98px;
+  text-transform: uppercase;
+}
+
+// Glass card — defined locally due to Angular view encapsulation
+.glass-card {
+  position: relative;
+  border: 0.845px solid rgba(255, 255, 255, 0.07);
+  border-radius: 32px;
+  box-shadow: 0px 32px 80px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 56, 43, 0.3);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+.glass-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.glass-card-shine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 141px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03), transparent);
+  border-radius: 32px 32px 0 0;
+  pointer-events: none;
+  z-index: 1;
 }

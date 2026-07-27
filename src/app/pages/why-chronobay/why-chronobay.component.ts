@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { NavMenuComponent } from '../../nav-menu/nav-menu.component';
 import { WhyHeroComponent } from './why-hero/why-hero.component';
 import { WhyStatsBarComponent } from './why-stats-bar/why-stats-bar.component';
@@ -13,7 +12,6 @@ import { WhyCtaComponent } from './why-cta/why-cta.component';
   selector: 'app-why-chronobay',
   standalone: true,
   imports: [
-    RouterLink,
     NavMenuComponent,
     WhyHeroComponent,
     WhyStatsBarComponent,

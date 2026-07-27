@@ -1,7 +1,7 @@
 .why-cta {
   position: relative;
   background: linear-gradient(to bottom, #061e18, #082a21);
-  padding: clamp(80px, 10vw, 140px) clamp(24px, 5vw, 48px);
+  padding: clamp(100px, 14vw, 200px) clamp(24px, 5vw, 48px);
   overflow: hidden;
   text-align: center;
 
@@ -15,44 +15,114 @@
     background: radial-gradient(ellipse at 50% 50%, rgba(176, 133, 39, 0.06) 0%, transparent 70%);
     filter: blur(60px);
     pointer-events: none;
+    z-index: 0;
   }
 
   &__inner {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 40px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
   }
 
   &__heading {
     margin: 20px 0 0;
-    font-size: clamp(36px, 5vw, 72px);
+    font-size: clamp(48px, 7vw, 88px);
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1;
     letter-spacing: -0.02em;
     color: #f7f5f1;
 
     em {
+      display: block;
       font-style: italic;
       color: #b08527;
     }
   }
 
   &__sub {
-    margin: 0;
+    margin: 20px 0 0;
     font-family: 'Inter', sans-serif;
-    font-size: clamp(14px, 1.8vw, 18px);
+    font-size: 15px;
     font-weight: 300;
     line-height: 1.8;
-    color: rgba(247, 245, 241, 0.5);
-    max-width: 600px;
+    color: rgba(247, 245, 241, 0.4);
+    max-width: 560px;
+    text-align: center;
   }
 
   &__actions {
-    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 19px 45px;
+    border-radius: 100px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease;
+
+    &--primary {
+      background: rgba(176, 133, 39, 0.15);
+      border: 0.845px solid rgba(176, 133, 39, 0.5);
+      color: #b08527;
+
+      &:hover {
+        background: rgba(176, 133, 39, 0.25);
+      }
+    }
+
+    &--secondary {
+      background: rgba(255, 255, 255, 0.04);
+      border: 0.845px solid rgba(255, 255, 255, 0.1);
+      color: rgba(247, 245, 241, 0.6);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(247, 245, 241, 0.85);
+      }
+    }
+  }
+
+  &__arrow {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+  }
+}
+
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #b08527;
+  letter-spacing: 1.98px;
+  text-transform: uppercase;
 }

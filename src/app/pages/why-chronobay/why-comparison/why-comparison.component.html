@@ -5,32 +5,46 @@
       <h2 class="comparison__heading font-cormorant">Chronobay vs. Everyone Else</h2>
     </div>
 
-    <div class="comparison__card glass-card">
-      <div class="glass-card-content comparison__table">
+    <div class="comparison__card">
+      <!-- Glass overlay -->
+      <div class="comparison__card-bg" aria-hidden="true"></div>
+      <!-- Inset shine -->
+      <div class="comparison__card-shine" aria-hidden="true"></div>
 
-        <!-- Header row -->
-        <div class="comparison__row comparison__row--head">
-          <span class="comparison__col-feature">Feature</span>
-          <span class="comparison__col-us font-cormorant">Chronobay</span>
-          <span class="comparison__col-them">Others</span>
-        </div>
-
-        @for (row of rows; track row.feature) {
-          <div class="comparison__row">
-            <span class="comparison__col-feature comparison__feature-text">{{ row.feature }}</span>
-            <span class="comparison__col-us">
-              @if (row.usIsCheck) {
-                <img src="icon/why/why-check.svg" alt="Yes" class="comparison__check" width="18" height="18" />
-              } @else {
-                <span class="comparison__us-val font-cormorant">{{ row.us }}</span>
-              }
-            </span>
-            <span class="comparison__col-them comparison__them-val">{{ row.them }}</span>
-          </div>
-        }
-
+      <!-- Header row -->
+      <div class="comparison__row comparison__row--head">
+        <span class="comparison__cell comparison__cell--feature comparison__label-feature">Feature</span>
+        <span class="comparison__cell comparison__cell--us comparison__label-us font-cormorant">Chronobay</span>
+        <span class="comparison__cell comparison__cell--them comparison__label-them">Others</span>
       </div>
-      <div class="glass-card-shine"></div>
+
+      <!-- Commission row (special: gold text, not icon) -->
+      <div class="comparison__row comparison__row--border">
+        <span class="comparison__cell comparison__cell--feature comparison__feature-text">Commission on sales</span>
+        <span class="comparison__cell comparison__cell--us">
+          <span class="comparison__gold-val font-cormorant">0%</span>
+        </span>
+        <span class="comparison__cell comparison__cell--them">
+          <span class="comparison__them-text">3–12%</span>
+        </span>
+      </div>
+
+      <!-- Rows with check icon -->
+      @for (row of rows; track row.feature) {
+        <div class="comparison__row" [class.comparison__row--border]="!$last">
+          <span class="comparison__cell comparison__cell--feature comparison__feature-text">{{ row.feature }}</span>
+          <span class="comparison__cell comparison__cell--us">
+            <img src="icon/why/why-circle-check.svg" alt="Yes" class="comparison__check-icon" width="18" height="18" />
+          </span>
+          <span class="comparison__cell comparison__cell--them">
+            @if (row.them) {
+              <span class="comparison__them-text">{{ row.them }}</span>
+            } @else {
+              <span class="comparison__cross">✕</span>
+            }
+          </span>
+        </div>
+      }
     </div>
   </div>
 </section>

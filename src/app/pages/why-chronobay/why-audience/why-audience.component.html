@@ -8,6 +8,7 @@
     <div class="audience__grid">
       @for (card of cards; track card.title) {
         <div class="audience__card glass-card">
+          <div class="glass-card-shine" aria-hidden="true"></div>
           <div class="glass-card-content audience__card-inner">
             <div class="audience__icon-box">
               <img [src]="card.icon" alt="" class="audience__icon-img" width="22" height="22" />
@@ -16,13 +17,12 @@
             <ul class="audience__points">
               @for (point of card.points; track point) {
                 <li class="audience__point">
-                  <span class="audience__bullet"></span>
+                  <span class="audience__bullet" aria-hidden="true"></span>
                   <span class="audience__point-text">{{ point }}</span>
                 </li>
               }
             </ul>
           </div>
-          <div class="glass-card-shine"></div>
         </div>
       }
     </div>

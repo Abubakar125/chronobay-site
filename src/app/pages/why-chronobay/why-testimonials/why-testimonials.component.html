@@ -11,19 +11,19 @@
     <div class="testimonials__grid">
       @for (t of testimonials; track t.name) {
         <div class="testimonials__card glass-card">
+          <div class="glass-card-shine" aria-hidden="true"></div>
           <div class="glass-card-content testimonials__card-inner">
             <p class="testimonials__quote-mark font-cormorant">&ldquo;</p>
             <p class="testimonials__quote font-cormorant">{{ t.quote }}</p>
             <div class="testimonials__divider"></div>
             <div class="testimonials__author">
-              <div class="testimonials__avatar font-cormorant">{{ t.initial }}</div>
+              <div class="testimonials__avatar">{{ t.initial }}</div>
               <div class="testimonials__info">
                 <p class="testimonials__name">{{ t.name }}</p>
                 <p class="testimonials__role">{{ t.role }}</p>
               </div>
             </div>
           </div>
-          <div class="glass-card-shine"></div>
         </div>
       }
     </div>
