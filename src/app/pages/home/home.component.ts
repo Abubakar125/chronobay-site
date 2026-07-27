@@ -1,15 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { NavMenuComponent } from '../../nav-menu/nav-menu.component';
+import { Component } from '@angular/core';
+import { HeaderComponent } from '../../shared/header/header.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavMenuComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  isMenuOpen = signal(false);
   openFaqIndex: number | null = 0;
 
   brands = [

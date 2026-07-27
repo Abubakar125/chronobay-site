@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
-import { NavMenuComponent } from '../../nav-menu/nav-menu.component';
+import { Component } from '@angular/core';
+import { HeaderComponent } from '../../shared/header/header.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 import { WhyHeroComponent } from './why-hero/why-hero.component';
 import { WhyStatsBarComponent } from './why-stats-bar/why-stats-bar.component';
 import { WhyReasonsComponent } from './why-reasons/why-reasons.component';
@@ -12,7 +13,8 @@ import { WhyCtaComponent } from './why-cta/why-cta.component';
   selector: 'app-why-chronobay',
   standalone: true,
   imports: [
-    NavMenuComponent,
+    HeaderComponent,
+    FooterComponent,
     WhyHeroComponent,
     WhyStatsBarComponent,
     WhyReasonsComponent,
@@ -24,6 +26,4 @@ import { WhyCtaComponent } from './why-cta/why-cta.component';
   templateUrl: './why-chronobay.component.html',
   styleUrl: './why-chronobay.component.scss'
 })
-export class WhyChronobayComponent {
-  isMenuOpen = signal(false);
-}
+export class WhyChronobayComponent {}
