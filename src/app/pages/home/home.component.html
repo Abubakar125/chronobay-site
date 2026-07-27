@@ -3,10 +3,33 @@
        NAVBAR + HERO CARD
   ═══════════════════════════════════════════ -->
   <div
-    class="px-3 pt-3 sm:px-5 sm:pt-5 xl:px-[34px] xl:pt-[35px] max-w-[2275px] mx-auto"
+    class="px-3 pt-3 sm:px-5 sm:pt-5 xl:px-[34px] xl:pt-[35px] mx-auto relative"
   >
+    <!-- LEFT: small decorative box — outside the card so it shows on the body background -->
     <div
-      class="rounded-2xl sm:rounded-[32px] xl:rounded-[42px] overflow-hidden bg-[#0A382B]"
+      class="absolute sm:top-[61.1%] xl:top-[58.5%] md:top-[58.2%] lg:top-[57%] top-[60%] left-[-4%] -translate-y-1/2 bg-[#224C40] pointer-events-none"
+      style="
+        width: clamp(38px, 11.72%, 217px);
+        aspect-ratio: 1;
+        border-radius: 17%;
+        z-index: 1000;
+      "
+    ></div>
+
+    <!-- RIGHT: small decorative box -->
+    <div
+      class="absolute sm:top-[61.1%] xl:top-[58.5%] md:top-[58.2%] lg:top-[57%] top-[60%] right-[-4%] -translate-y-1/2 bg-[#224C40]"
+      style="
+        
+        width: clamp(38px, 11.72%, 217px);
+        aspect-ratio: 1;
+        border-radius: 17%;
+        z-index: 1000;
+      "
+    ></div>
+
+    <div
+      class="rounded-2xl sm:rounded-[32px] xl:rounded-[42px] overflow-hidden bg-[#0A382B] relative z-10"
     >
       <app-header />
 
@@ -15,22 +38,12 @@
         class="relative overflow-hidden"
         style="min-height: clamp(320px, 58.3vw, 746px)"
       >
-        <!-- LEFT: small decorative box -->
-        <div
-          class="absolute top-1/2 -translate-y-1/2 bg-[#224C40]"
-          style="
-            left: -5%;
-            width: clamp(38px, 11.72%, 217px);
-            aspect-ratio: 1;
-            border-radius: 17%;
-          "
-        ></div>
 
         <!-- LEFT: large card with watch -->
         <div
           class="absolute top-1/2 -translate-y-1/2 bg-[#224C40] flex items-center justify-center"
           style="
-            left: 9.3%;
+            left: 8.32%;
             width: clamp(52px, 17.33%, 321px);
             aspect-ratio: 1;
             border-radius: 11.5%;
@@ -102,17 +115,6 @@
         >
           <img src="images/watch-right.svg" alt="" style="width: 58.3%; height: 85.7%; object-fit: contain" />
         </div>
-
-        <!-- RIGHT: small decorative box -->
-        <div
-          class="absolute top-1/2 -translate-y-1/2 bg-[#224C40]"
-          style="
-            left: 94.11%;
-            width: clamp(38px, 11.72%, 217px);
-            aspect-ratio: 1;
-            border-radius: 17%;
-          "
-        ></div>
 
         <!-- WhatsApp floating button -->
         <a
