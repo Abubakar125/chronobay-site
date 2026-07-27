@@ -107,6 +107,82 @@
   flex-shrink: 0;
 }
 
+// ── Hero watch swap animation ──────────────────────────────────────────────
+$ease-swap: cubic-bezier(0.4, 0, 0.2, 1);
+$dur-swap: 0.75s;
+
+.hero-watch-el {
+  position: absolute;
+  background: #224C40;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 15;
+  transition:
+    left   $dur-swap $ease-swap,
+    right  $dur-swap $ease-swap,
+    top    $dur-swap $ease-swap,
+    width  $dur-swap $ease-swap,
+    border-radius $dur-swap $ease-swap;
+}
+
+.hero-watch-img {
+  width: 58.3%;
+  height: 85.7%;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+}
+
+.hero-watch-img-hidden { opacity: 0; }
+
+// Shared top % (mirrors the existing vertical placement)
+@mixin hero-top {
+  top: 60%;
+  transform: translateY(-50%);
+  @media (min-width: 640px)  { top: 61.1%; }
+  @media (min-width: 768px)  { top: 58.2%; }
+  @media (min-width: 1024px) { top: 57%;   }
+  @media (min-width: 1280px) { top: 58.5%; }
+}
+
+// LEFT side — large position (matches original left watch card in the hero)
+.hero-watch-left-large {
+  @include hero-top;
+  left: calc(10px + 8.32%);
+  width: clamp(52px, 17.33%, 321px);
+  border-radius: 11.5%;
+  @media (min-width: 640px)  { left: calc(17px + 8.32%); }
+  @media (min-width: 1280px) { left: calc(28px + 8.32%); }
+}
+
+// LEFT side — small position (matches original left decorative box)
+.hero-watch-left-small {
+  @include hero-top;
+  left: -4%;
+  width: clamp(38px, 11.72%, 217px);
+  border-radius: 17%;
+}
+
+// RIGHT side — large position
+.hero-watch-right-large {
+  @include hero-top;
+  right: calc(10px + 8.32%);
+  width: clamp(52px, 17.33%, 321px);
+  border-radius: 11.5%;
+  @media (min-width: 640px)  { right: calc(17px + 8.32%); }
+  @media (min-width: 1280px) { right: calc(28px + 8.32%); }
+}
+
+// RIGHT side — small position
+.hero-watch-right-small {
+  @include hero-top;
+  right: -4%;
+  width: clamp(38px, 11.72%, 217px);
+  border-radius: 17%;
+}
+
 .whatsapp-btn {
   position: absolute;
   bottom: clamp(14px, 4%, 36px);

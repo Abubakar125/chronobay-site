@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 
@@ -9,8 +9,20 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
   openFaqIndex: number | null = 0;
+  heroSlide = 0;
+  private heroSlideTimer: any;
+
+  ngOnInit() {
+    this.heroSlideTimer = setInterval(() => {
+      this.heroSlide = this.heroSlide === 0 ? 1 : 0;
+    }, 3500);
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.heroSlideTimer);
+  }
 
   brands = [
     { name: 'Tissot',  logo: 'images/brand-tissot.svg'  },

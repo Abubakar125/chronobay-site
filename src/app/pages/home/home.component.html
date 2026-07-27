@@ -5,28 +5,33 @@
   <div
     class="px-3 pt-3 sm:px-5 sm:pt-5 xl:px-[34px] xl:pt-[35px] mx-auto relative"
   >
-    <!-- LEFT: small decorative box — outside the card so it shows on the body background -->
-    <div
-      class="absolute sm:top-[61.1%] xl:top-[58.5%] md:top-[58.2%] lg:top-[57%] top-[60%] left-[-4%] -translate-y-1/2 bg-[#224C40] pointer-events-none"
-      style="
-        width: clamp(38px, 11.72%, 217px);
-        aspect-ratio: 1;
-        border-radius: 17%;
-        z-index: 1000;
-      "
-    ></div>
+    <!-- ═══ LEFT WATCH PAIR (both elements in outer wrapper, no overflow clip) ═══ -->
+    <!-- Element A: starts large (left watch), shrinks to small on slide 1 -->
+    <div class="hero-watch-el pointer-events-none"
+         [class.hero-watch-left-large]="heroSlide === 0"
+         [class.hero-watch-left-small]="heroSlide !== 0">
+      <img src="images/watch-left.svg" alt="" class="hero-watch-img" [class.hero-watch-img-hidden]="heroSlide !== 0" />
+    </div>
+    <!-- Element B: starts small, grows to large (right watch) on slide 1 -->
+    <div class="hero-watch-el pointer-devices-none"
+         [class.hero-watch-left-large]="heroSlide !== 0"
+         [class.hero-watch-left-small]="heroSlide === 0">
+      <img src="images/watch-right.svg" alt="" class="hero-watch-img" [class.hero-watch-img-hidden]="heroSlide === 0" />
+    </div>
 
-    <!-- RIGHT: small decorative box -->
-    <div
-      class="absolute sm:top-[61.1%] xl:top-[58.5%] md:top-[58.2%] lg:top-[57%] top-[60%] right-[-4%] -translate-y-1/2 bg-[#224C40]"
-      style="
-        
-        width: clamp(38px, 11.72%, 217px);
-        aspect-ratio: 1;
-        border-radius: 17%;
-        z-index: 1000;
-      "
-    ></div>
+    <!-- ═══ RIGHT WATCH PAIR ═══ -->
+    <!-- Element A: starts large (right watch), shrinks on slide 1 -->
+    <div class="hero-watch-el pointer-events-none"
+         [class.hero-watch-right-large]="heroSlide === 0"
+         [class.hero-watch-right-small]="heroSlide !== 0">
+      <img src="images/watch-right.svg" alt="" class="hero-watch-img" [class.hero-watch-img-hidden]="heroSlide !== 0" />
+    </div>
+    <!-- Element B: starts small, grows to large (left watch) on slide 1 -->
+    <div class="hero-watch-el pointer-events-none"
+         [class.hero-watch-right-large]="heroSlide !== 0"
+         [class.hero-watch-right-small]="heroSlide === 0">
+      <img src="images/watch-left.svg" alt="" class="hero-watch-img" [class.hero-watch-img-hidden]="heroSlide === 0" />
+    </div>
 
     <div
       class="rounded-2xl sm:rounded-[32px] xl:rounded-[42px] overflow-hidden bg-[#0A382B] relative z-10"
@@ -38,23 +43,6 @@
         class="relative overflow-hidden"
         style="min-height: clamp(320px, 58.3vw, 746px)"
       >
-
-        <!-- LEFT: large card with watch -->
-        <div
-          class="absolute top-1/2 -translate-y-1/2 bg-[#224C40] flex items-center justify-center"
-          style="
-            left: 8.32%;
-            width: clamp(52px, 17.33%, 321px);
-            aspect-ratio: 1;
-            border-radius: 11.5%;
-          "
-        >
-          <img
-            src="images/watch-left.svg"
-            alt=""
-            style="width: 58.3%; height: 85.7%; object-fit: contain"
-          />
-        </div>
 
         <!-- CENTER: all text content -->
         <div
@@ -101,19 +89,6 @@
               <img src="images/play-store.png" alt="Get it on Google Play" class="w-full h-full object-contain" />
             </a>
           </div>
-        </div>
-
-        <!-- RIGHT: large card with watch -->
-        <div
-          class="absolute top-1/2 -translate-y-1/2 bg-[#224C40] flex items-center justify-center"
-          style="
-            right: 8.32%;
-            width: clamp(52px, 17.33%, 321px);
-            aspect-ratio: 1;
-            border-radius: 11.5%;
-          "
-        >
-          <img src="images/watch-right.svg" alt="" style="width: 58.3%; height: 85.7%; object-fit: contain" />
         </div>
 
         <!-- WhatsApp floating button -->
