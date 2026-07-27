@@ -113,6 +113,17 @@
             border-radius: 17%;
           "
         ></div>
+
+        <!-- WhatsApp floating button -->
+        <a
+          href="https://wa.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-btn"
+          aria-label="Chat on WhatsApp"
+        >
+          <img src="images/whatsapp-icon.svg" alt="" />
+        </a>
       </div>
     </div>
   </div>
@@ -120,17 +131,18 @@
   <!-- ═══════════════════════════════════════════
        BRAND LOGO STRIP
   ═══════════════════════════════════════════ -->
-  <section class="mt-6">
-    <div class="overflow-x-auto">
-      <div
-        class="flex items-center justify-center gap-[17px] min-w-max xl:min-w-0 xl:w-full px-[17px] xl:px-5"
-      >
-        @for (brand of brands; track brand.name) {
-          <div class="brand-logo-tile">
-            <img [src]="brand.logo" [alt]="brand.name" />
-          </div>
-        }
-      </div>
+  <section class="mt-6 overflow-hidden">
+    <div class="marquee-track">
+      @for (brand of brands; track brand.name) {
+        <div class="brand-logo-tile">
+          <img [src]="brand.logo" [alt]="brand.name" />
+        </div>
+      }
+      @for (brand of brands; track brand.name) {
+        <div class="brand-logo-tile" aria-hidden="true">
+          <img [src]="brand.logo" [alt]="brand.name" />
+        </div>
+      }
     </div>
   </section>
 
