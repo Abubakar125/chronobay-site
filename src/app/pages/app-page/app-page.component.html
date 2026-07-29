@@ -3,12 +3,12 @@
   <!-- ═══════════════════════════════════════════
        HERO
   ═══════════════════════════════════════════ -->
-  <div class="px-3 pt-3 sm:px-5 sm:pt-5 xl:px-[34px] xl:pt-[35px]">
+  <div class="px-3 py-3 sm:px-5 sm:pt-5 xl:px-[34px] xl:py-[35px]">
     <div class="rounded-2xl sm:rounded-[32px] xl:rounded-[42px] overflow-hidden bg-[#0A382B] relative">
       <app-header />
 
       <div class="relative overflow-hidden min-h-[500px] xl:min-h-[680px] flex items-center">
-        <div class="max-w-[1400px] mx-auto px-4 sm:px-8 xl:px-16 py-14 xl:py-20 w-full">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-8 xl:px-32 py-14 xl:pt-20 xl:pb-36 w-full">
           <div class="flex flex-col xl:flex-row items-center gap-10 xl:gap-20">
 
             <!-- Left copy -->
@@ -22,9 +22,9 @@
                 <em class="text-cb-gold" style="font-style:italic">In Your Pocket.</em>
               </h1>
               <p class="font-inter font-light text-[rgba(247,245,241,0.65)] text-[15px] xl:text-[17px] leading-[1.75] max-w-[540px] mx-auto xl:mx-0 mb-8">
-                Chronobay gives professional dealers and collectors the tools to buy, sell, and discover rare timepieces — backed by verified identity, real-time market data, and a private global community.
+                Chronobay gives professional dealers and collectors instant access to the world's most trusted zero-commission luxury watch marketplace.
               </p>
-              <div class="flex items-center justify-center xl:justify-start gap-3 flex-wrap mb-5">
+              <div class="flex items-center justify-center xl:justify-start gap-3 flex-wrap">
                 <a href="#" class="block h-[40px] sm:h-[48px]">
                   <img src="images/ios-store.png" alt="Download on the App Store" class="h-full w-auto object-contain" />
                 </a>
@@ -32,44 +32,16 @@
                   <img src="images/play-store.png" alt="Get it on Google Play" class="h-full w-auto object-contain" />
                 </a>
               </div>
-              <p class="font-inter text-[rgba(247,245,241,0.4)] text-[13px]">
-                <span class="text-[#b08527]">★★★★★</span>&nbsp; 4.9 · Over 2,400 reviews
-              </p>
             </div>
 
             <!-- Right: phone mockup (marketplace screen) -->
             <div class="flex-shrink-0 flex justify-center xl:justify-end">
-              <div class="relative w-[220px] sm:w-[260px] xl:w-[300px] drop-shadow-2xl">
-                <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-                <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-                  <div class="app-screen__topbar">
-                    <span class="app-screen__title">Marketplace</span>
-                    <span class="app-screen__count">247 listings</span>
-                  </div>
-                  <div class="app-screen__search">
-                    <span class="app-screen__search-icon">⌕</span>
-                    <span class="app-screen__search-placeholder">Search by reference…</span>
-                  </div>
-                  <div class="app-screen__listings">
-                    @for (l of listings; track l.ref) {
-                      <div class="app-listing">
-                        <div class="app-listing__watch-icon">◉</div>
-                        <div class="app-listing__meta">
-                          <span class="app-listing__brand">{{ l.brand }}</span>
-                          <span class="app-listing__ref">{{ l.ref }}</span>
-                        </div>
-                        <span class="app-listing__price">{{ l.price }}</span>
-                      </div>
-                    }
-                  </div>
-                  <div class="app-screen__tabbar">
-                    <span class="app-tabbar__icon active">⊞</span>
-                    <span class="app-tabbar__icon">♡</span>
-                    <span class="app-tabbar__icon">＋</span>
-                    <span class="app-tabbar__icon">◇</span>
-                  </div>
-                </div>
-              </div>
+              <img
+                src="images/app-hero-mobile.svg"
+                alt="Chronobay App"
+                class="w-[220px] sm:w-[280px] xl:w-[280px] h-auto block pointer-events-none"
+                style="filter: drop-shadow(0 40px 80px rgba(0,0,0,0.75)) drop-shadow(0 16px 32px rgba(0,0,0,0.55));"
+              />
             </div>
 
           </div>
@@ -81,107 +53,52 @@
   <!-- ═══════════════════════════════════════════
        APP EXPERIENCE
   ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4">
-    <div class="max-w-[1400px] mx-auto">
-      <div class="text-center mb-16">
-        <p class="section-label mb-4">App Experience</p>
-        <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]">Designed For Modern Collectors.</h2>
+  <section class="bg-[#061e18] px-4 pt-[74px] pb-20 xl:pb-24 overflow-hidden">
+    <div class="max-w-[1152px] mx-auto">
+
+      <!-- Header -->
+      <div class="flex flex-col items-center">
+        <span class="badge-pill mb-6"><span class="section-label">App Experience</span></span>
+        <div class="text-center">
+          <p class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] xl:text-[72px] leading-[1.05] tracking-[-1.5px]">Designed For</p>
+          <p class="font-cormorant font-medium italic text-cb-gold text-[48px] md:text-[60px] xl:text-[72px] leading-[1.05] tracking-[-1.5px]">Modern Collectors.</p>
+        </div>
       </div>
 
-      <div class="flex flex-col lg:flex-row items-end justify-center gap-8 lg:gap-10">
+      <!-- Three phones — staircase layout, aligned at bottom -->
+      <div class="flex items-end justify-center gap-4 xl:gap-4 pt-20">
 
-        <!-- Phone 1: Browse Marketplace -->
-        <div class="flex flex-col items-center gap-5">
-          <div class="relative w-[200px] sm:w-[230px] xl:w-[260px] drop-shadow-2xl">
-            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-              <div class="app-screen__topbar">
-                <span class="app-screen__title">Marketplace</span>
-                <span class="app-screen__count">247 listings</span>
-              </div>
-              <div class="app-screen__search">
-                <span class="app-screen__search-icon">⌕</span>
-                <span class="app-screen__search-placeholder">Search by reference…</span>
-              </div>
-              <div class="app-screen__listings">
-                @for (l of listings; track l.ref) {
-                  <div class="app-listing">
-                    <div class="app-listing__watch-icon">◉</div>
-                    <div class="app-listing__meta">
-                      <span class="app-listing__brand">{{ l.brand }}</span>
-                      <span class="app-listing__ref">{{ l.ref }}</span>
-                    </div>
-                    <span class="app-listing__price">{{ l.price }}</span>
-                  </div>
-                }
-              </div>
-              <div class="app-screen__tabbar">
-                <span class="app-tabbar__icon active">⊞</span>
-                <span class="app-tabbar__icon">♡</span>
-                <span class="app-tabbar__icon">＋</span>
-                <span class="app-tabbar__icon">◇</span>
-              </div>
-            </div>
-          </div>
-          <p class="section-label text-center">Browse Marketplace</p>
+        <!-- Left: Browse Marketplace — shorter, lifted 48px -->
+        <div class="flex flex-col items-center gap-6 pb-12 hidden sm:flex">
+          <img
+            src="images/app-hero-mobile.svg"
+            alt="Browse Marketplace"
+            class="w-[180px] xl:w-[234px] h-auto block pointer-events-none"
+            style="filter: drop-shadow(0px 60px 120px rgba(0,0,0,0.7)) drop-shadow(0px 20px 40px rgba(0,0,0,0.5));"
+          />
+          <span class="font-inter font-normal text-[rgba(247,245,241,0.4)] text-[11px] xl:text-[12px] tracking-[1.5px] uppercase whitespace-nowrap">Browse Marketplace</span>
         </div>
 
-        <!-- Phone 2: Watch Detail (center — taller) -->
-        <div class="flex flex-col items-center gap-5 lg:-mb-12">
-          <div class="relative w-[220px] sm:w-[250px] xl:w-[290px] drop-shadow-2xl">
-            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-              <div class="app-screen__detail-img">
-                <span class="app-detail__watch-icon">◉</span>
-              </div>
-              <div class="app-screen__detail-info">
-                <span class="app-detail__brand">Patek Philippe</span>
-                <span class="app-detail__model">Nautilus 5711/1A</span>
-                <div class="app-detail__price-row">
-                  <span class="app-detail__price">$68,000</span>
-                  <span class="app-detail__watchcharts">WatchCharts ↗</span>
-                </div>
-                <div class="app-detail__pills">
-                  <span class="app-detail__pill">2021</span>
-                  <span class="app-detail__pill">Box ✓</span>
-                  <span class="app-detail__pill">Papers ✓</span>
-                </div>
-                <button class="app-detail__cta">Make an Offer</button>
-              </div>
-            </div>
-          </div>
-          <p class="section-label text-center">Watch Detail &amp; Data</p>
+        <!-- Center: Watch Detail & Data — tallest, no bottom offset -->
+        <div class="flex flex-col items-center gap-6">
+          <img
+            src="images/app-hero-mobile.svg"
+            alt="Watch Detail and Data"
+            class="w-[220px] sm:w-[230px] xl:w-[273px] h-auto block pointer-events-none"
+            style="filter: drop-shadow(0px 60px 120px rgba(0,0,0,0.7)) drop-shadow(0px 20px 40px rgba(0,0,0,0.5));"
+          />
+          <span class="font-inter font-normal text-[rgba(247,245,241,0.4)] text-[11px] xl:text-[12px] tracking-[1.5px] uppercase whitespace-nowrap">Watch Detail &amp; Data</span>
         </div>
 
-        <!-- Phone 3: Private Negotiation -->
-        <div class="flex flex-col items-center gap-5">
-          <div class="relative w-[200px] sm:w-[230px] xl:w-[260px] drop-shadow-2xl">
-            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-              <div class="app-screen__chat-header">
-                <div class="app-chat__avatar">A</div>
-                <div class="app-chat__meta">
-                  <span class="app-chat__name">Ahmed Al Rashid</span>
-                  <span class="app-chat__badge">● Verified Dealer</span>
-                </div>
-              </div>
-              <div class="app-screen__chat-body">
-                <div class="app-chat-bubble app-chat-bubble--left">Interested in the 5711. Is the price firm?</div>
-                <div class="app-chat-bubble app-chat-bubble--right">Best I can do is $65,500 with papers.</div>
-                <div class="app-chat-bubble app-chat-bubble--left">Deal. Can arrange escrow.</div>
-                <div class="app-chat__offer-card">
-                  <span class="app-chat__offer-label">Offer Sent</span>
-                  <span class="app-chat__offer-price">$65,500</span>
-                  <span class="app-chat__offer-ref">Patek 5711/1A</span>
-                </div>
-              </div>
-              <div class="app-screen__chat-input">
-                <span class="app-chat__input-placeholder">Message…</span>
-                <span class="app-chat__send">↑</span>
-              </div>
-            </div>
-          </div>
-          <p class="section-label text-center">Private Negotiation</p>
+        <!-- Right: Private Negotiation — shorter, lifted 48px -->
+        <div class="flex flex-col items-center gap-6 pb-12 hidden sm:flex">
+          <img
+            src="images/app-hero-mobile.svg"
+            alt="Private Negotiation"
+            class="w-[180px] xl:w-[234px] h-auto block pointer-events-none"
+            style="filter: drop-shadow(0px 60px 120px rgba(0,0,0,0.7)) drop-shadow(0px 20px 40px rgba(0,0,0,0.5));"
+          />
+          <span class="font-inter font-normal text-[rgba(247,245,241,0.4)] text-[11px] xl:text-[12px] tracking-[1.5px] uppercase whitespace-nowrap">Private Negotiation</span>
         </div>
 
       </div>
@@ -245,90 +162,82 @@
   <!-- ═══════════════════════════════════════════
        SHOWCASE — Every feature at a glance
   ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4">
-    <div class="max-w-[1400px] mx-auto">
-      <div class="text-center mb-16">
-        <p class="section-label mb-4">App Showcase</p>
-        <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]">Every feature, at a glance.</h2>
+  <section class="bg-[#082a21] pt-20 overflow-visible">
+
+    <!-- Header — constrained -->
+    <div class="max-w-[1024px] mx-auto px-6">
+      <div class="flex flex-col items-center">
+        <span class="badge-pill mb-6"><span class="section-label">App Showcase</span></span>
+        <h2 class="font-cormorant font-medium text-[40px] md:text-[56px] xl:text-[64px] leading-[1.05] tracking-[-1.5px] text-center">
+          <span class="text-cb-cream">Every feature, </span><em class="text-cb-gold">at a glance.</em>
+        </h2>
       </div>
+    </div>
 
-      <!-- Desktop: phone + radiating callouts -->
-      <div class="hidden lg:grid showcase-grid">
-        <!-- Left callouts -->
-        <div class="showcase-col showcase-col--left">
-          <div class="showcase-callout">
-            <span class="showcase-callout__label">Reference Scanner</span>
-            <span class="showcase-callout__line"></span>
-            <span class="showcase-callout__dot"></span>
-          </div>
-          <div class="showcase-callout">
-            <span class="showcase-callout__label">Market Value</span>
-            <span class="showcase-callout__line"></span>
-            <span class="showcase-callout__dot"></span>
-          </div>
+    <!-- Desktop: full-width 3-col flex so labels reach the far edges -->
+    <div class="hidden xl:flex items-stretch py-20 px-8 max-w-[1152px] mx-auto">
+
+      <!-- Left column: Reference Scanner top-left (left-one angles ↘ toward phone upper),
+                        Market Value bottom-left (left-two angles ↗ toward phone lower) -->
+      <div class="flex-1 min-w-0 flex flex-col mt-[150px] mb-[150px]">
+        <div class="flex items-start w-full">
+          <span class="showcase-callout__label flex-shrink-0">Reference Scanner</span>
+          <img src="icon/left-one.svg" class="flex-1 min-w-0 block h-auto mt-3" alt="" aria-hidden="true">
         </div>
-
-        <!-- Center phone -->
-        <div class="showcase-center">
-          <div class="relative w-[240px] xl:w-[280px] drop-shadow-2xl mx-auto">
-            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-              <div class="app-screen__topbar">
-                <span class="app-screen__title">Marketplace</span>
-                <span class="app-screen__count">247 listings</span>
-              </div>
-              <div class="app-screen__search">
-                <span class="app-screen__search-icon">⌕</span>
-                <span class="app-screen__search-placeholder">Search by reference…</span>
-              </div>
-              <div class="app-screen__listings">
-                @for (l of listings; track l.ref) {
-                  <div class="app-listing">
-                    <div class="app-listing__watch-icon">◉</div>
-                    <div class="app-listing__meta">
-                      <span class="app-listing__brand">{{ l.brand }}</span>
-                      <span class="app-listing__ref">{{ l.ref }}</span>
-                    </div>
-                    <span class="app-listing__price">{{ l.price }}</span>
-                  </div>
-                }
-              </div>
-              <div class="app-screen__tabbar">
-                <span class="app-tabbar__icon active">⊞</span>
-                <span class="app-tabbar__icon">♡</span>
-                <span class="app-tabbar__icon">＋</span>
-                <span class="app-tabbar__icon">◇</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right callouts -->
-        <div class="showcase-col showcase-col--right">
-          <div class="showcase-callout showcase-callout--right">
-            <span class="showcase-callout__dot"></span>
-            <span class="showcase-callout__line"></span>
-            <span class="showcase-callout__label">Watch History</span>
-          </div>
-          <div class="showcase-callout showcase-callout--right">
-            <span class="showcase-callout__dot"></span>
-            <span class="showcase-callout__line"></span>
-            <span class="showcase-callout__label">Direct Chat</span>
-          </div>
+        <div class="flex-1"></div>
+        <div class="flex items-end w-full">
+          <span class="showcase-callout__label flex-shrink-0">Market Value</span>
+          <img src="icon/left-two.svg" class="flex-1 min-w-0 block h-auto mb-2" alt="" aria-hidden="true">
         </div>
       </div>
 
-      <!-- Bottom callouts (desktop) + all callouts (mobile) -->
-      <div class="lg:hidden flex flex-wrap justify-center gap-3 mt-8">
+      <!-- Center: Saved Collection → top.svg → phone → top.svg → Offer System -->
+      <div class="flex-shrink-0 flex flex-col items-center">
+        <span class="showcase-pill">Saved Collection</span>
+        <img src="icon/top.svg" style="width: 1px; height: 64px; display: block;" alt="" aria-hidden="true">
+        <img
+          src="images/app-hero-mobile.svg"
+          alt="App showcase"
+          class="w-[240px] xl:w-[286px] h-auto block pointer-events-none"
+          style="filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.75)) drop-shadow(0 16px 32px rgba(0, 0, 0, 0.55));"
+        />
+        <img src="icon/top.svg" style="width: 1px; height: 64px; display: block;" alt="" aria-hidden="true">
+        <span class="showcase-pill">Offer System</span>
+      </div>
+
+      <!-- Right column: Watch History top-right (right-one angles ↙ from phone upper),
+                         Direct Chat bottom-right (right-two angles ↖ from phone lower) -->
+      <div class="flex-1 min-w-0 flex flex-col mt-[150px] mb-[150px]">
+        <div class="flex items-start w-full">
+          <img src="icon/right-one.svg" class="flex-1 min-w-0 block h-auto mt-3" alt="" aria-hidden="true">
+          <span class="showcase-callout__label flex-shrink-0">Watch History</span>
+        </div>
+        <div class="flex-1"></div>
+        <div class="flex items-end w-full">
+          <img src="icon/right-two.svg" class="flex-1 min-w-0 block h-auto mb-2" alt="" aria-hidden="true">
+          <span class="showcase-callout__label flex-shrink-0">Direct Chat</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mobile: phone + pills -->
+    <div class="xl:hidden max-w-[1024px] mx-auto px-6">
+      <div class="flex justify-center mt-12 mb-8">
+        <img
+          src="images/app-hero-mobile.svg"
+          alt="App showcase"
+          class="w-[220px] sm:w-[260px] h-auto block pointer-events-none"
+          style="filter: drop-shadow(0 40px 80px rgba(0,0,0,0.75)) drop-shadow(0 16px 32px rgba(0,0,0,0.55));"
+        />
+      </div>
+      <div class="flex flex-wrap justify-center gap-3 pb-12">
         @for (c of showcaseCallouts; track c.label) {
           <span class="showcase-pill">{{ c.label }}</span>
         }
       </div>
-      <div class="hidden lg:flex justify-center gap-6 mt-8">
-        <span class="showcase-pill">Saved Collection</span>
-        <span class="showcase-pill">Offer System</span>
-      </div>
     </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════════
@@ -379,63 +288,55 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
-       BENEFITS
+       BENEFITS — Your entire operation, one screen.
   ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4">
-    <div class="max-w-[1400px] mx-auto">
-      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+  <section class="benefits-section">
+    <div class="benefits-inner">
 
-        <!-- Phone mockup -->
-        <div class="flex-shrink-0 flex justify-center">
-          <div class="relative w-[220px] sm:w-[260px] xl:w-[300px] drop-shadow-2xl">
-            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-              <div class="app-screen__topbar">
-                <span class="app-screen__title">Marketplace</span>
-                <span class="app-screen__count">247 listings</span>
-              </div>
-              <div class="app-screen__search">
-                <span class="app-screen__search-icon">⌕</span>
-                <span class="app-screen__search-placeholder">Search by reference…</span>
-              </div>
-              <div class="app-screen__listings">
-                @for (l of listings; track l.ref) {
-                  <div class="app-listing">
-                    <div class="app-listing__watch-icon">◉</div>
-                    <div class="app-listing__meta">
-                      <span class="app-listing__brand">{{ l.brand }}</span>
-                      <span class="app-listing__ref">{{ l.ref }}</span>
-                    </div>
-                    <span class="app-listing__price">{{ l.price }}</span>
-                  </div>
-                }
-              </div>
-              <div class="app-screen__tabbar">
-                <span class="app-tabbar__icon active">⊞</span>
-                <span class="app-tabbar__icon">♡</span>
-                <span class="app-tabbar__icon">＋</span>
-                <span class="app-tabbar__icon">◇</span>
-              </div>
-            </div>
-          </div>
+      <!-- Left: Phone mockup with ambient glow -->
+      <div class="benefits-phone-col">
+        <div class="benefits-glow-bg"></div>
+        <img
+          src="images/app-hero-mobile.svg"
+          alt="Chronobay App"
+          class="benefits-phone-img"
+          style="filter: drop-shadow(0px 60px 100px rgba(0,0,0,0.7)) drop-shadow(0px 20px 40px rgba(0,0,0,0.5));"
+        />
+      </div>
+
+      <!-- Right: Heading + glass benefit cards -->
+      <div class="benefits-content-col">
+
+        <!-- Label pill -->
+        <div class="benefits-label-pill">
+          <span class="font-inter font-normal text-[#b08527] text-[11px] tracking-[2.26px] uppercase">App Benefits</span>
         </div>
 
-        <!-- Benefit list -->
-        <div class="flex-1 min-w-0 w-full max-w-[560px] mx-auto lg:mx-0">
-          <p class="section-label mb-4 text-center lg:text-left">App Benefits</p>
-          <h2 class="font-cormorant font-medium text-cb-cream text-[40px] md:text-[52px] leading-[1.1] tracking-[-0.6px] mb-8 text-center lg:text-left">Your entire operation,<br />one screen.</h2>
-          <div class="flex flex-col">
-            @for (benefit of benefits; track benefit) {
-              <div class="benefit-item">
-                <div class="benefit-item__dot"></div>
-                <span class="font-inter font-normal text-[rgba(247,245,241,0.8)] text-[15px] leading-[1.5] flex-1">{{ benefit }}</span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 8H12M12 8L8 4M12 8L8 12" stroke="rgba(176,133,39,0.5)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <!-- Heading -->
+        <h2 class="benefits-heading">
+          Your entire operation,<br />
+          <em class="benefits-heading__gold">one screen.</em>
+        </h2>
+
+        <!-- Benefit glass cards -->
+        <div class="benefits-list">
+          @for (benefit of benefits; track benefit) {
+            <div class="benefits-card">
+              <div class="benefits-card__shine"></div>
+              <div class="benefits-card__bg"></div>
+              <div class="benefits-card__content">
+                <div class="benefits-card__dot"></div>
+                <span class="benefits-card__label">{{ benefit }}</span>
+                <div class="benefits-card__spacer"></div>
+                <div class="benefits-card__arrow">→</div>
               </div>
-            }
-          </div>
+              <div class="benefits-card__inset"></div>
+            </div>
+          }
         </div>
 
       </div>
+
     </div>
   </section>
 
@@ -490,119 +391,34 @@
   <!-- ═══════════════════════════════════════════
        GALLERY — The experience, in full detail
   ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4">
-    <div class="max-w-[1400px] mx-auto">
-      <div class="text-center mb-16">
-        <p class="section-label mb-4">App Gallery</p>
-        <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]">The experience, in full detail.</h2>
+  <section class="gallery-section">
+
+    <!-- Header -->
+    <div class="gallery-header">
+      <div class="gallery-label-pill">
+        <span class="font-inter font-normal text-[#b08527] text-[11px] tracking-[2.26px] uppercase">App Gallery</span>
       </div>
-
-      <div class="gallery-row">
-        <div class="gallery-phone gallery-phone--tilted-left">
-          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-            <div class="app-screen__topbar"><span class="app-screen__title">Marketplace</span><span class="app-screen__count">247 listings</span></div>
-            <div class="app-screen__listings app-screen__listings--compact">
-              @for (l of listings; track l.ref) {
-                <div class="app-listing app-listing--compact">
-                  <div class="app-listing__watch-icon">◉</div>
-                  <div class="app-listing__meta"><span class="app-listing__brand">{{ l.brand }}</span><span class="app-listing__ref">{{ l.ref }}</span></div>
-                  <span class="app-listing__price">{{ l.price }}</span>
-                </div>
-              }
-            </div>
-            <div class="app-screen__tabbar"><span class="app-tabbar__icon active">⊞</span><span class="app-tabbar__icon">♡</span><span class="app-tabbar__icon">＋</span><span class="app-tabbar__icon">◇</span></div>
-          </div>
-        </div>
-
-        <div class="gallery-phone gallery-phone--tilted-left-sm">
-          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-            <div class="app-screen__detail-img"><span class="app-detail__watch-icon">◉</span></div>
-            <div class="app-screen__detail-info">
-              <span class="app-detail__brand">Patek Philippe</span>
-              <span class="app-detail__model">Nautilus 5711/1A</span>
-              <div class="app-detail__price-row"><span class="app-detail__price">$68,000</span></div>
-              <button class="app-detail__cta">Make an Offer</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-phone gallery-phone--tilted-right-sm">
-          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-            <div class="app-screen__chat-header">
-              <div class="app-chat__avatar">A</div>
-              <div class="app-chat__meta"><span class="app-chat__name">Ahmed Al Rashid</span><span class="app-chat__badge">● Verified Dealer</span></div>
-            </div>
-            <div class="app-screen__chat-body">
-              <div class="app-chat-bubble app-chat-bubble--left">Interested in the 5711. Is the price firm?</div>
-              <div class="app-chat-bubble app-chat-bubble--right">Best I can do is $65,500 with papers.</div>
-              <div class="app-chat__offer-card"><span class="app-chat__offer-label">Offer Sent</span><span class="app-chat__offer-price">$65,500</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-phone gallery-phone--tilted-right">
-          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-            <div class="app-screen__topbar"><span class="app-screen__title">Collection</span><span class="app-screen__count">12 watches</span></div>
-            <div class="app-screen__listings app-screen__listings--compact">
-              @for (l of listings; track l.ref) {
-                <div class="app-listing app-listing--compact">
-                  <div class="app-listing__watch-icon">◉</div>
-                  <div class="app-listing__meta"><span class="app-listing__brand">{{ l.brand }}</span><span class="app-listing__ref">{{ l.ref }}</span></div>
-                  <span class="app-listing__price app-listing__price--up">+12%</span>
-                </div>
-              }
-            </div>
-            <div class="app-screen__tabbar"><span class="app-tabbar__icon">⊞</span><span class="app-tabbar__icon">♡</span><span class="app-tabbar__icon">＋</span><span class="app-tabbar__icon active">◇</span></div>
-          </div>
-        </div>
-      </div>
+      <h2 class="gallery-heading">
+        The experience,<br />
+        <em class="gallery-heading__gold">in full detail.</em>
+      </h2>
     </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════════
-       DOWNLOAD CTA — Experience Luxury Trading
-  ═══════════════════════════════════════════ -->
-  <section class="py-24 px-4 bg-[#061B16]">
-    <div class="max-w-[1400px] mx-auto">
-      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-        <!-- Phone -->
-        <div class="flex-shrink-0 flex justify-center">
-          <div class="relative w-[220px] sm:w-[260px] xl:w-[280px] drop-shadow-2xl">
-            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
-            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
-              <div class="app-screen__detail-img"><span class="app-detail__watch-icon">◉</span></div>
-              <div class="app-screen__detail-info">
-                <span class="app-detail__brand">Patek Philippe</span>
-                <span class="app-detail__model">Nautilus 5711/1A</span>
-                <div class="app-detail__price-row"><span class="app-detail__price">$68,000</span><span class="app-detail__watchcharts">WatchCharts ↗</span></div>
-                <div class="app-detail__pills"><span class="app-detail__pill">2021</span><span class="app-detail__pill">Box ✓</span><span class="app-detail__pill">Papers ✓</span></div>
-                <button class="app-detail__cta">Make an Offer</button>
-              </div>
-            </div>
-          </div>
+    <!-- 4 phones row -->
+    <div class="gallery-phones">
+      @for (p of galleryPhones; track p) {
+        <div class="gallery-phone-item">
+          <img
+            src="images/app-hero-mobile.svg"
+            alt="Chronobay App"
+            class="gallery-phone-img"
+            style="filter: drop-shadow(0px 60px 120px rgba(0,0,0,0.7)) drop-shadow(0px 20px 40px rgba(0,0,0,0.5));"
+          />
+          <span class="gallery-phone-label">{{ p }}</span>
         </div>
-
-        <!-- Copy + buttons -->
-        <div class="flex-1 min-w-0 text-center lg:text-left">
-          <p class="section-label mb-4">Ready?</p>
-          <h2 class="font-cormorant font-medium text-cb-cream text-[44px] md:text-[60px] xl:text-[72px] leading-[1.05] tracking-[-1.44px] mb-5">Experience Luxury Trading.</h2>
-          <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[16px] leading-[1.7] max-w-[400px] mx-auto lg:mx-0 mb-8">Join a private marketplace where discretion, quality, and trust define every transaction.</p>
-          <div class="flex items-center justify-center lg:justify-start gap-4 flex-wrap mb-6">
-            <button class="glass-btn">Apply for Membership →</button>
-          </div>
-          <div class="flex items-center justify-center lg:justify-start gap-3 flex-wrap">
-            <a href="#" class="block h-[44px]"><img src="images/ios-store.png" alt="Download on the App Store" class="h-full w-auto object-contain" /></a>
-            <a href="#" class="block h-[44px]"><img src="images/play-store.png" alt="Get it on Google Play" class="h-full w-auto object-contain" /></a>
-          </div>
-        </div>
-
-      </div>
+      }
     </div>
+
   </section>
 
   <!-- ═══════════════════════════════════════════
@@ -642,6 +458,57 @@
       </div>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+       DOWNLOAD CTA — Experience Luxury Trading
+  ═══════════════════════════════════════════ -->
+  <section class="download-section">
+    <div class="download-glow"></div>
+
+    <div class="download-inner">
+
+      <!-- Left: Phone -->
+      <div class="download-phone-wrap">
+        <img
+          src="images/app-hero-mobile.svg"
+          alt="Chronobay App"
+          class="download-phone-img"
+        />
+      </div>
+
+      <!-- Right: Copy + actions -->
+      <div class="download-content">
+
+        <div class="download-label-pill">
+          <span class="font-inter font-normal text-[#b08527] text-[11px] tracking-[2.26px] uppercase">Ready?</span>
+        </div>
+
+        <h2 class="download-heading">
+          Experience Luxury<br />
+          <em class="download-heading__gold">Trading.</em>
+        </h2>
+
+        <p class="download-para">
+          Join a private marketplace where discretion, quality, and zero commission define every trade.
+        </p>
+
+        <div class="download-actions">
+          <div class="download-store-row">
+            <a href="#" class="block h-[44px]">
+              <img src="images/ios-store.png" alt="Download on the App Store" class="h-full w-auto object-contain" />
+            </a>
+            <a href="#" class="block h-[44px]">
+              <img src="images/play-store.png" alt="Get it on Google Play" class="h-full w-auto object-contain" />
+            </a>
+          </div>
+          <button class="download-membership-btn">Apply for Membership →</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
 
   <app-faq />
 

@@ -1,0 +1,421 @@
+<div class="hiw-page bg-cb-green min-h-screen font-inter text-cb-cream">
+  <app-header />
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hiw-hero relative overflow-hidden">
+    <div class="hiw-hero__glow" aria-hidden="true"></div>
+    <div class="relative z-10 max-w-[900px] mx-auto text-center px-6" style="padding-top: clamp(100px,14vw,190px); padding-bottom: clamp(80px,10vw,140px)">
+      <div class="inline-flex items-center px-6 py-[9px] rounded-full bg-[rgba(176,133,39,0.08)] border border-[rgba(176,133,39,0.2)] mb-8">
+        <span class="section-label">How It Works</span>
+      </div>
+      <h1 class="font-cormorant font-medium text-cb-cream leading-[1.05] tracking-[-0.02em] mb-8"
+          style="font-size: clamp(52px,7vw,100px)">
+        Luxury Trading,<br />
+        <em class="text-cb-gold italic">Reimagined.</em>
+      </h1>
+      <p class="font-inter font-light text-[rgba(247,245,241,0.5)] leading-[1.8] max-w-[600px] mx-auto mb-12"
+         style="font-size: clamp(15px,1.8vw,18px)">
+        Every transaction on Chronobay is designed to provide maximum security,
+        transparency, and value — for every member, on every deal.
+      </p>
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <a href="#" class="block w-[144px] h-[48px]">
+          <img src="images/ios-store.png" alt="Download on the App Store" class="w-full h-full object-contain" />
+        </a>
+        <a href="#" class="block w-[144px] h-[48px]">
+          <img src="images/play-store.png" alt="Get it on Google Play" class="w-full h-full object-contain" />
+        </a>
+      </div>
+      <div class="flex flex-col items-center mt-16">
+        <div class="w-px h-12 bg-gradient-to-b from-transparent to-[rgba(176,133,39,0.5)]"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TWO COMMUNITIES
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#061E18]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label mb-4">Two Worlds, One Platform</p>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.1] tracking-[-1.44px]"
+            style="font-size: clamp(40px,5vw,72px)">Designed For Two Communities</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Professional Dealers -->
+        <div class="glass-card p-10 lg:p-12 flex flex-col gap-6">
+          <div class="glass-card-shine"></div>
+          <div class="glass-card-content flex flex-col gap-6">
+            <span class="self-start inline-flex items-center px-4 py-[6px] rounded-full bg-[rgba(176,133,39,0.1)] border border-[rgba(176,133,39,0.2)] font-inter font-medium text-[11px] text-[#b08527] tracking-[1.65px] uppercase">
+              Professional Dealers
+            </span>
+            <div class="font-cormorant font-medium leading-[1.1] tracking-[-1.12px]" style="font-size: clamp(40px,5vw,56px)">
+              <span class="text-cb-cream">Built for the</span><br />
+              <em class="text-cb-gold italic">serious trade.</em>
+            </div>
+            <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[15px] leading-[27px] max-w-[540px]">
+              Tools crafted for professionals who move volume, manage inventory, and demand efficiency without compromise.
+            </p>
+            <div class="flex flex-col gap-4 pt-2">
+              @for (feature of dealerFeatures; track feature) {
+                <div class="flex items-center gap-4">
+                  <div class="w-7 h-7 rounded-full bg-[rgba(176,133,39,0.1)] border border-[rgba(176,133,39,0.2)] flex items-center justify-center flex-shrink-0">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <path d="M2.5 6.5L5.5 9.5L10.5 4" stroke="#b08527" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-inter font-normal text-[rgba(247,245,241,0.75)] text-[15px]">{{ feature }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Private Collectors -->
+        <div class="glass-card p-10 lg:p-12 flex flex-col gap-6">
+          <div class="glass-card-shine"></div>
+          <div class="glass-card-content flex flex-col gap-6">
+            <span class="self-start inline-flex items-center px-4 py-[6px] rounded-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] font-inter font-medium text-[11px] text-[rgba(247,245,241,0.6)] tracking-[1.65px] uppercase">
+              Private Collectors
+            </span>
+            <div class="font-cormorant font-medium leading-[1.1] tracking-[-1.12px]" style="font-size: clamp(40px,5vw,56px)">
+              <span class="text-cb-cream">Collect with</span><br />
+              <em class="text-cb-gold italic">confidence.</em>
+            </div>
+            <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[15px] leading-[27px] max-w-[540px]">
+              Access rare timepieces from verified sources with complete market transparency and fair pricing.
+            </p>
+            <div class="flex flex-col gap-4 pt-2">
+              @for (feature of collectorFeatures; track feature) {
+                <div class="flex items-center gap-4">
+                  <div class="w-7 h-7 rounded-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] flex items-center justify-center flex-shrink-0">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <path d="M2.5 6.5L5.5 9.5L10.5 4" stroke="rgba(247,245,241,0.65)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                  <span class="font-inter font-normal text-[rgba(247,245,241,0.75)] text-[15px]">{{ feature }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SELLER JOURNEY
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#082a21]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="mb-16">
+        <span class="inline-flex items-center px-5 py-2 rounded-full bg-[rgba(176,133,39,0.08)] border border-[rgba(176,133,39,0.2)] section-label mb-6 w-fit">For Sellers</span>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.05] tracking-[-0.02em] mb-4"
+            style="font-size: clamp(40px,5vw,80px)">The Seller Journey.</h2>
+        <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[16px] leading-[1.7] max-w-[480px]">
+          From listing to completed sale — a process built for professionals.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <!-- Timeline -->
+        <div class="hiw-timeline">
+          @for (step of sellerSteps; track step.num; let last = $last) {
+            <div class="hiw-timeline__item">
+              <div class="hiw-timeline__connector">
+                <div class="hiw-timeline__num">{{ step.num }}</div>
+                @if (!last) { <div class="hiw-timeline__line"></div> }
+              </div>
+              <div class="glass-card p-6 hiw-timeline__card">
+                <div class="glass-card-shine"></div>
+                <div class="glass-card-content">
+                  <h3 class="font-cormorant font-medium text-cb-cream text-[22px] leading-[1.3] tracking-[-0.02em] mb-2">{{ step.title }}</h3>
+                  <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[14px] leading-[1.7]">{{ step.desc }}</p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- Phone mockup — Listing Screen -->
+        <div class="hiw-phone-mockup sticky top-24">
+          <p class="hiw-phone-mockup__label section-label mb-5 text-center">Listing View</p>
+          <div class="hiw-phone-frame mx-auto">
+            <div class="hiw-phone-screen">
+              <div class="hiw-app-bar">
+                <span class="font-cormorant font-medium text-cb-cream text-[15px]">New Listing</span>
+              </div>
+              <div class="hiw-listing-form">
+                <div class="hiw-form-field">
+                  <span class="hiw-form-label">Reference Number</span>
+                  <span class="hiw-form-value">5711/1A-010</span>
+                </div>
+                <div class="hiw-divider"></div>
+                <div class="hiw-auto-detected">
+                  <span class="hiw-auto-badge">Auto-detected</span>
+                  <span class="hiw-auto-brand font-cormorant">Patek Philippe Nautilus</span>
+                </div>
+                <div class="hiw-divider"></div>
+                <div class="hiw-form-grid">
+                  <div class="hiw-form-field">
+                    <span class="hiw-form-label">Year</span>
+                    <span class="hiw-form-value">2021</span>
+                  </div>
+                  <div class="hiw-form-field">
+                    <span class="hiw-form-label">Diameter</span>
+                    <span class="hiw-form-value">40mm</span>
+                  </div>
+                  <div class="hiw-form-field">
+                    <span class="hiw-form-label">Movement</span>
+                    <span class="hiw-form-value">Cal. 324 S C</span>
+                  </div>
+                  <div class="hiw-form-field">
+                    <span class="hiw-form-label">Material</span>
+                    <span class="hiw-form-value">Steel</span>
+                  </div>
+                </div>
+                <button class="hiw-publish-btn">Publish Listing</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BUYER JOURNEY
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#061e18]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="mb-16">
+        <span class="inline-flex items-center px-5 py-2 rounded-full bg-[rgba(176,133,39,0.08)] border border-[rgba(176,133,39,0.2)] section-label mb-6 w-fit">For Buyers</span>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.05] tracking-[-0.02em] mb-4"
+            style="font-size: clamp(40px,5vw,80px)">The Buyer Journey.</h2>
+        <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[16px] leading-[1.7] max-w-[480px]">
+          Every watch, every dealer, every price — verified and transparent.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <!-- Phone mockup — Browse Screen -->
+        <div class="hiw-phone-mockup order-2 lg:order-1 sticky top-24">
+          <p class="hiw-phone-mockup__label section-label mb-5 text-center">Browse View</p>
+          <div class="hiw-phone-frame mx-auto">
+            <div class="hiw-phone-screen">
+              <div class="hiw-app-bar">
+                <span class="font-cormorant font-medium text-cb-cream text-[15px]">Marketplace</span>
+              </div>
+              <div class="hiw-search-bar">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <circle cx="6" cy="6" r="4.5" stroke="rgba(247,245,241,0.3)" stroke-width="1.2"/>
+                  <path d="M10 10L13 13" stroke="rgba(247,245,241,0.3)" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <span class="hiw-search-placeholder">Search by reference…</span>
+              </div>
+              <div class="hiw-listing-list">
+                @for (listing of buyerListings; track listing.ref) {
+                  <div class="hiw-listing-row">
+                    <div class="hiw-listing-dot"></div>
+                    <div class="flex flex-col flex-1 min-w-0">
+                      <span class="hiw-listing-ref">{{ listing.ref }}</span>
+                      <span class="hiw-listing-brand">{{ listing.brand }}</span>
+                    </div>
+                    <span class="hiw-listing-price">{{ listing.price }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="hiw-timeline order-1 lg:order-2">
+          @for (step of buyerSteps; track step.num; let last = $last) {
+            <div class="hiw-timeline__item">
+              <div class="hiw-timeline__connector">
+                <div class="hiw-timeline__num">{{ step.num }}</div>
+                @if (!last) { <div class="hiw-timeline__line"></div> }
+              </div>
+              <div class="glass-card p-6 hiw-timeline__card">
+                <div class="glass-card-shine"></div>
+                <div class="glass-card-content">
+                  <h3 class="font-cormorant font-medium text-cb-cream text-[22px] leading-[1.3] tracking-[-0.02em] mb-2">{{ step.title }}</h3>
+                  <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[14px] leading-[1.7]">{{ step.desc }}</p>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       VERIFICATION
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#082a21]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label mb-4">Verification</p>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.1] tracking-[-1.44px] mb-4"
+            style="font-size: clamp(40px,5vw,72px)">Trust Is Everything.</h2>
+        <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[16px] leading-[1.7] max-w-[500px] mx-auto">
+          Multiple layers of verification protect every member at every step.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        @for (card of verificationCards; track card.title) {
+          <div class="glass-card p-8 flex flex-col gap-5">
+            <div class="glass-card-shine"></div>
+            <div class="glass-card-content flex flex-col gap-5">
+              <div class="icon-box">
+                <img [src]="card.icon" alt="" class="w-[22px] h-[22px] object-contain" />
+              </div>
+              <div>
+                <p class="font-cormorant font-medium text-cb-cream text-[22px] leading-[1.3] tracking-[-0.02em] mb-2">{{ card.title }}</p>
+                <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[14px] leading-[1.7]">{{ card.desc }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       MARKET INTELLIGENCE
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#061e18]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label mb-4">Market Intelligence</p>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.1] tracking-[-1.44px] mb-4"
+            style="font-size: clamp(40px,5vw,72px)">Powered By Real Market Data.</h2>
+        <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[16px] leading-[1.7] max-w-[500px] mx-auto">
+          WatchCharts™ powers live pricing inside every Chronobay listing.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        @for (card of marketCards; track card.title) {
+          <div class="glass-card p-10 flex flex-col gap-6">
+            <div class="glass-card-shine"></div>
+            <div class="glass-card-content flex flex-col gap-6">
+              <div class="flex items-center justify-between">
+                <div class="icon-box">
+                  <img [src]="card.icon" alt="" class="w-[22px] h-[22px] object-contain" />
+                </div>
+                <span class="inline-flex items-center px-3 py-[5px] rounded-full bg-[rgba(176,133,39,0.08)] border border-[rgba(176,133,39,0.2)] font-inter font-medium text-[10px] text-[#b08527] tracking-[1.2px] uppercase">
+                  {{ card.badge }}
+                </span>
+              </div>
+              <div>
+                <p class="font-cormorant font-medium text-cb-cream text-[24px] leading-[1.3] tracking-[-0.02em] mb-2">{{ card.title }}</p>
+                <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[14px] leading-[1.7]">{{ card.desc }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT SETS US APART
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#082a21]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label mb-4">What Sets Us Apart</p>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.1] tracking-[-1.44px]"
+            style="font-size: clamp(40px,5vw,72px)">
+          Built differently, <em class="text-cb-gold italic">by design.</em>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        @for (card of whyCards; track card.title) {
+          <div class="glass-card p-10 flex gap-6">
+            <div class="glass-card-shine"></div>
+            <div class="glass-card-content flex gap-6 w-full">
+              <div class="icon-box flex-shrink-0 mt-1">
+                <img [src]="card.icon" alt="" class="w-[22px] h-[22px] object-contain" />
+              </div>
+              <div>
+                <p class="font-cormorant font-medium text-cb-cream text-[24px] leading-[1.3] tracking-[-0.02em] mb-2">{{ card.title }}</p>
+                <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[14px] leading-[1.7]">{{ card.desc }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       COMPLETE EXPERIENCE — 6-STEP TIMELINE
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#061e18]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-16">
+        <p class="section-label mb-4">The Complete Experience</p>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.1] tracking-[-1.44px]"
+            style="font-size: clamp(40px,5vw,72px)">From signup to collection.</h2>
+      </div>
+      <div class="relative">
+        <div class="hidden lg:block absolute h-px bg-[rgba(176,133,39,0.2)]"
+             style="top: 48px; left: calc(8.33% + 24px); right: calc(8.33% + 24px)"></div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
+          @for (step of journeySteps; track step.num) {
+            <div class="flex flex-col items-center text-center">
+              <div class="step-circle mb-6">
+                <span class="font-cormorant font-medium text-cb-gold text-[32px] leading-none">{{ step.num }}</span>
+              </div>
+              <p class="font-inter font-medium text-[rgba(247,245,241,0.75)] text-[13px] leading-[1.4] tracking-[0.3px]">{{ step.title }}</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECURITY
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#082a21]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-14">
+        <p class="section-label mb-4">Security</p>
+        <h2 class="font-cormorant font-medium text-cb-cream leading-[1.1] tracking-[-1.44px] mb-4"
+            style="font-size: clamp(40px,5vw,72px)">Protected At Every Step.</h2>
+        <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[16px] leading-[1.7] max-w-[500px] mx-auto">
+          Chronobay's infrastructure is engineered from the ground up for privacy and security.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        @for (card of securityCards; track card.title) {
+          <div class="glass-card p-8 flex flex-col gap-5">
+            <div class="glass-card-shine"></div>
+            <div class="glass-card-content flex flex-col gap-5">
+              <div class="icon-box">
+                <img [src]="card.icon" alt="" class="w-[22px] h-[22px] object-contain" />
+              </div>
+              <div>
+                <p class="font-cormorant font-medium text-cb-cream text-[22px] leading-[1.3] tracking-[-0.02em] mb-2">{{ card.title }}</p>
+                <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[14px] leading-[1.7]">{{ card.desc }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SHARED SECTIONS ═══ -->
+  <app-faq />
+  <app-future-cta />
+  <app-industry-leaders />
+  <app-footer />
+</div>

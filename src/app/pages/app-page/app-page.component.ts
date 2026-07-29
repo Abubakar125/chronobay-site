@@ -36,12 +36,12 @@ export class AppPageComponent {
   ];
 
   readonly showcaseCallouts = [
-    { label: 'Reference Scanner', position: 'left-top' },
-    { label: 'Market Value',      position: 'left-bottom' },
-    { label: 'Saved Collection',  position: 'top' },
-    { label: 'Watch History',     position: 'right-top' },
-    { label: 'Direct Chat',       position: 'right-bottom' },
-    { label: 'Offer System',      position: 'bottom' },
+    { label: 'Reference Scanner' },
+    { label: 'Saved Collection' },
+    { label: 'Watch History' },
+    { label: 'Market Value' },
+    { label: 'Offer System' },
+    { label: 'Direct Chat' },
   ];
 
   readonly benefits = [
@@ -52,6 +52,8 @@ export class AppPageComponent {
     'Collection Dashboard',
     'Verified Community',
   ];
+
+  readonly galleryPhones = ['Collect', 'Collect', 'Collect', 'Collect'];
 
   readonly securityCards = [
     { icon: 'icon/uae-pass.png',        title: 'UAE PASS Verification',    description: 'Government-issued identity verification trusted by millions across the UAE.' },
