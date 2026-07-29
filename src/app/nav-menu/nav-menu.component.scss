@@ -1,0 +1,194 @@
+// ─── Overlay ─────────────────────────────────────────────────────────────────
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 8000;
+  background: #082A21;
+  overflow: hidden; // never scroll the overlay itself
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// ─── Panel ───────────────────────────────────────────────────────────────────
+
+.nav-panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow: hidden;
+
+  // Horizontal padding only — vertical padding is handled by font-size scaling
+  padding: 72px 28px 52px;
+
+  @media (min-width: 640px) {
+    padding: 80px 56px 60px;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 80px 192px 80px;
+  }
+}
+
+// ─── Close button ────────────────────────────────────────────────────────────
+
+.nav-close {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 0.827px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  @media (min-width: 640px) {
+    top: 28px;
+    right: 28px;
+    width: 48px;
+    height: 48px;
+  }
+
+  @media (min-width: 1280px) {
+    top: 36px;
+    right: 36px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.nav-close__icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// ─── Links ───────────────────────────────────────────────────────────────────
+//
+// Sizes are chosen so 9 links × font-size × line-height 1.1 fits within the
+// available panel height (viewport height − top/bottom padding) at every
+// common screen height for that width breakpoint.
+//
+// Check: available = viewport_h − vert_padding  |  used = 9 × size × 1.1
+// ──────────────────────────────────────────────────────────────────────────
+//  <480px   : 24px → used=237px  | 500px - 124px = 376px avail  ✓
+//  480–639  : 28px → used=277px  | 667px - 124px = 543px avail  ✓
+//  640–767  : 36px → used=356px  | 768px - 140px = 628px avail  ✓
+//  768–1023 : 44px → used=435px  | 768px - 140px = 628px avail  ✓
+//  1024–1279: 52px → used=515px  | 768px - 140px = 628px avail  ✓
+//  1280–1535: 60px → used=594px  | 768px - 160px = 608px avail  ✓ (14px spare)
+//  ≥1536    : 72px → used=713px  | 900px - 160px = 740px avail  ✓
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  color: #f7f5f1;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  display: block;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    color 0.2s ease,
+    opacity 0.45s ease,
+    transform 0.45s ease;
+
+  font-size: 24px;
+
+  @media (min-width: 480px) {
+    font-size: 28px;
+  }
+
+  @media (min-width: 640px) {
+    font-size: 36px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 44px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 52px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 60px;
+  }
+
+  @media (min-width: 1536px) {
+    font-size: 60px;
+  }
+
+  &--gold {
+    color: #b08527;
+  }
+
+  &:hover {
+    opacity: 0.7 !important;
+  }
+
+  &--animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// ─── Tagline ─────────────────────────────────────────────────────────────────
+
+.nav-tagline {
+  position: absolute;
+  bottom: 16px;
+  left: 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1.95px;
+  text-transform: uppercase;
+  color: rgba(247, 245, 241, 0.3);
+
+  @media (min-width: 640px) {
+    left: 56px;
+    bottom: 24px;
+    font-size: 12px;
+  }
+
+  @media (min-width: 1280px) {
+    left: 192px;
+    bottom: 40px;
+    font-size: 13px;
+  }
+}

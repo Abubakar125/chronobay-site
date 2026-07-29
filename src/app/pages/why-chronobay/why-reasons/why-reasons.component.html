@@ -1,0 +1,29 @@
+<section class="reasons">
+  <div class="reasons__inner">
+    <div class="reasons__header">
+      <p class="section-label">The Foundation</p>
+      <h2 class="reasons__heading font-cormorant">
+        Six reasons the serious<br>
+        <em>market chose us.</em>
+      </h2>
+    </div>
+
+    <div class="reasons__list">
+      @for (r of reasons; track r.num) {
+        <div class="reasons__row">
+          <div class="reasons__meta">
+            <span class="reasons__num font-cormorant">{{ r.num }}</span>
+            <div class="reasons__icon-box">
+              <img [src]="r.icon" alt="" class="reasons__icon-img" width="20" height="20" />
+            </div>
+          </div>
+          <div class="reasons__body">
+            <h3 class="reasons__title font-cormorant">{{ r.title }}</h3>
+            <p class="reasons__desc">{{ r.body }}</p>
+          </div>
+          <div class="reasons__badge">{{ r.badge }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
