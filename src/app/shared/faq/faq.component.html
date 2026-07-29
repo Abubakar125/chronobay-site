@@ -1,0 +1,37 @@
+<section class="py-24 px-4">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="text-center mb-20">
+      <p class="section-label mb-4">Questions</p>
+      <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] xl:text-[72px] leading-[1.1] tracking-[-1.44px]">Frequently Asked</h2>
+    </div>
+    <div class="max-w-[900px] mx-auto bg-[rgba(10,56,43,0.25)] border border-[rgba(255,255,255,0.06)] rounded-[32px] px-8 md:px-[49px] overflow-hidden shadow-[0px_32px_80px_0px_rgba(0,0,0,0.3)]">
+      @for (faq of faqs; track faq.q; let i = $index) {
+        <div class="faq-item">
+          <button class="w-full flex items-center justify-between py-7 text-left" (click)="toggleFaq(i)">
+            <span class="font-cormorant font-medium text-[22px] leading-[33px] tracking-[-0.22px] pr-8"
+              [style.color]="openFaqIndex === i ? '#b08527' : '#f7f5f1'">{{ faq.q }}</span>
+            <div class="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-[18px] transition-colors"
+              [style]="openFaqIndex === i
+                ? 'background: rgba(176,133,39,0.15); border: 0.723px solid rgba(176,133,39,0.3)'
+                : 'background: rgba(255,255,255,0.05); border: 0.723px solid rgba(255,255,255,0.08)'">
+              @if (openFaqIndex === i) {
+                <svg width="14" height="2" viewBox="0 0 14 2" fill="none">
+                  <path d="M1 1H13" stroke="#b08527" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              } @else {
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M7 1V13M1 7H13" stroke="rgba(247,245,241,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              }
+            </div>
+          </button>
+          @if (openFaqIndex === i) {
+            <div class="pb-7">
+              <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[15px] leading-[27px] max-w-[720px]">{{ faq.a }}</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

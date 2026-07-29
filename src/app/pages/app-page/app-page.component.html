@@ -1,0 +1,654 @@
+<div class="bg-cb-green min-h-screen font-inter text-cb-cream">
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <div class="px-3 pt-3 sm:px-5 sm:pt-5 xl:px-[34px] xl:pt-[35px]">
+    <div class="rounded-2xl sm:rounded-[32px] xl:rounded-[42px] overflow-hidden bg-[#0A382B] relative">
+      <app-header />
+
+      <div class="relative overflow-hidden min-h-[500px] xl:min-h-[680px] flex items-center">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-8 xl:px-16 py-14 xl:py-20 w-full">
+          <div class="flex flex-col xl:flex-row items-center gap-10 xl:gap-20">
+
+            <!-- Left copy -->
+            <div class="flex-1 min-w-0 text-center xl:text-left">
+              <div class="flex justify-center xl:justify-start mb-5">
+                <span class="badge-pill"><span class="section-label">Available on iOS &amp; Android</span></span>
+              </div>
+              <h1 class="font-cormorant font-medium text-cb-cream leading-[1.05] tracking-[-0.04em] text-[36px] sm:text-[48px] xl:text-[72px] mb-6">
+                Luxury Trading.<br />
+                Anywhere. Anytime.<br />
+                <em class="text-cb-gold" style="font-style:italic">In Your Pocket.</em>
+              </h1>
+              <p class="font-inter font-light text-[rgba(247,245,241,0.65)] text-[15px] xl:text-[17px] leading-[1.75] max-w-[540px] mx-auto xl:mx-0 mb-8">
+                Chronobay gives professional dealers and collectors the tools to buy, sell, and discover rare timepieces — backed by verified identity, real-time market data, and a private global community.
+              </p>
+              <div class="flex items-center justify-center xl:justify-start gap-3 flex-wrap mb-5">
+                <a href="#" class="block h-[40px] sm:h-[48px]">
+                  <img src="images/ios-store.png" alt="Download on the App Store" class="h-full w-auto object-contain" />
+                </a>
+                <a href="#" class="block h-[40px] sm:h-[48px]">
+                  <img src="images/play-store.png" alt="Get it on Google Play" class="h-full w-auto object-contain" />
+                </a>
+              </div>
+              <p class="font-inter text-[rgba(247,245,241,0.4)] text-[13px]">
+                <span class="text-[#b08527]">★★★★★</span>&nbsp; 4.9 · Over 2,400 reviews
+              </p>
+            </div>
+
+            <!-- Right: phone mockup (marketplace screen) -->
+            <div class="flex-shrink-0 flex justify-center xl:justify-end">
+              <div class="relative w-[220px] sm:w-[260px] xl:w-[300px] drop-shadow-2xl">
+                <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+                <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+                  <div class="app-screen__topbar">
+                    <span class="app-screen__title">Marketplace</span>
+                    <span class="app-screen__count">247 listings</span>
+                  </div>
+                  <div class="app-screen__search">
+                    <span class="app-screen__search-icon">⌕</span>
+                    <span class="app-screen__search-placeholder">Search by reference…</span>
+                  </div>
+                  <div class="app-screen__listings">
+                    @for (l of listings; track l.ref) {
+                      <div class="app-listing">
+                        <div class="app-listing__watch-icon">◉</div>
+                        <div class="app-listing__meta">
+                          <span class="app-listing__brand">{{ l.brand }}</span>
+                          <span class="app-listing__ref">{{ l.ref }}</span>
+                        </div>
+                        <span class="app-listing__price">{{ l.price }}</span>
+                      </div>
+                    }
+                  </div>
+                  <div class="app-screen__tabbar">
+                    <span class="app-tabbar__icon active">⊞</span>
+                    <span class="app-tabbar__icon">♡</span>
+                    <span class="app-tabbar__icon">＋</span>
+                    <span class="app-tabbar__icon">◇</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       APP EXPERIENCE
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-16">
+        <p class="section-label mb-4">App Experience</p>
+        <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]">Designed For Modern Collectors.</h2>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-end justify-center gap-8 lg:gap-10">
+
+        <!-- Phone 1: Browse Marketplace -->
+        <div class="flex flex-col items-center gap-5">
+          <div class="relative w-[200px] sm:w-[230px] xl:w-[260px] drop-shadow-2xl">
+            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+              <div class="app-screen__topbar">
+                <span class="app-screen__title">Marketplace</span>
+                <span class="app-screen__count">247 listings</span>
+              </div>
+              <div class="app-screen__search">
+                <span class="app-screen__search-icon">⌕</span>
+                <span class="app-screen__search-placeholder">Search by reference…</span>
+              </div>
+              <div class="app-screen__listings">
+                @for (l of listings; track l.ref) {
+                  <div class="app-listing">
+                    <div class="app-listing__watch-icon">◉</div>
+                    <div class="app-listing__meta">
+                      <span class="app-listing__brand">{{ l.brand }}</span>
+                      <span class="app-listing__ref">{{ l.ref }}</span>
+                    </div>
+                    <span class="app-listing__price">{{ l.price }}</span>
+                  </div>
+                }
+              </div>
+              <div class="app-screen__tabbar">
+                <span class="app-tabbar__icon active">⊞</span>
+                <span class="app-tabbar__icon">♡</span>
+                <span class="app-tabbar__icon">＋</span>
+                <span class="app-tabbar__icon">◇</span>
+              </div>
+            </div>
+          </div>
+          <p class="section-label text-center">Browse Marketplace</p>
+        </div>
+
+        <!-- Phone 2: Watch Detail (center — taller) -->
+        <div class="flex flex-col items-center gap-5 lg:-mb-12">
+          <div class="relative w-[220px] sm:w-[250px] xl:w-[290px] drop-shadow-2xl">
+            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+              <div class="app-screen__detail-img">
+                <span class="app-detail__watch-icon">◉</span>
+              </div>
+              <div class="app-screen__detail-info">
+                <span class="app-detail__brand">Patek Philippe</span>
+                <span class="app-detail__model">Nautilus 5711/1A</span>
+                <div class="app-detail__price-row">
+                  <span class="app-detail__price">$68,000</span>
+                  <span class="app-detail__watchcharts">WatchCharts ↗</span>
+                </div>
+                <div class="app-detail__pills">
+                  <span class="app-detail__pill">2021</span>
+                  <span class="app-detail__pill">Box ✓</span>
+                  <span class="app-detail__pill">Papers ✓</span>
+                </div>
+                <button class="app-detail__cta">Make an Offer</button>
+              </div>
+            </div>
+          </div>
+          <p class="section-label text-center">Watch Detail &amp; Data</p>
+        </div>
+
+        <!-- Phone 3: Private Negotiation -->
+        <div class="flex flex-col items-center gap-5">
+          <div class="relative w-[200px] sm:w-[230px] xl:w-[260px] drop-shadow-2xl">
+            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+              <div class="app-screen__chat-header">
+                <div class="app-chat__avatar">A</div>
+                <div class="app-chat__meta">
+                  <span class="app-chat__name">Ahmed Al Rashid</span>
+                  <span class="app-chat__badge">● Verified Dealer</span>
+                </div>
+              </div>
+              <div class="app-screen__chat-body">
+                <div class="app-chat-bubble app-chat-bubble--left">Interested in the 5711. Is the price firm?</div>
+                <div class="app-chat-bubble app-chat-bubble--right">Best I can do is $65,500 with papers.</div>
+                <div class="app-chat-bubble app-chat-bubble--left">Deal. Can arrange escrow.</div>
+                <div class="app-chat__offer-card">
+                  <span class="app-chat__offer-label">Offer Sent</span>
+                  <span class="app-chat__offer-price">$65,500</span>
+                  <span class="app-chat__offer-ref">Patek 5711/1A</span>
+                </div>
+              </div>
+              <div class="app-screen__chat-input">
+                <span class="app-chat__input-placeholder">Message…</span>
+                <span class="app-chat__send">↑</span>
+              </div>
+            </div>
+          </div>
+          <p class="section-label text-center">Private Negotiation</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FEATURES
+  ═══════════════════════════════════════════ -->
+  <section class="features-section">
+    <div class="features-section__inner">
+
+      <!-- Header -->
+      <div class="features-section__header">
+        <div class="features-label-pill">
+          <span class="font-inter font-normal text-[#b08527] text-[11px] tracking-[2.26px] uppercase">Core Features</span>
+        </div>
+        <div class="features-section__heading-wrap">
+          <p class="font-cormorant font-medium text-[#f7f5f1] text-[48px] md:text-[64px] leading-[1.05] tracking-[-1.5px] text-center">Everything a serious</p>
+          <p class="font-cormorant font-medium italic text-[#b08527] text-[48px] md:text-[64px] leading-[1.05] tracking-[-1.5px] text-center">trader needs.</p>
+        </div>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="features-grid">
+        @for (f of features; track f.title) {
+          <div class="feature-card">
+            <!-- Top shine gradient line -->
+            <div class="feature-card__shine"></div>
+            <!-- Background tint -->
+            <div class="feature-card__bg"></div>
+            <!-- Inset border glow -->
+            <div class="feature-card__inset"></div>
+
+            <!-- Content -->
+            <div class="feature-card__body">
+              <!-- Icon -->
+              <div class="feature-card__icon-box">
+                <img [src]="f.icon" alt="" class="feature-card__icon-img" />
+              </div>
+
+              <!-- Text -->
+              <div class="feature-card__text">
+                <p class="font-cormorant font-medium text-[#f7f5f1] text-[24px] leading-[33px]">{{ f.title }}</p>
+                <p class="font-inter font-light text-[rgba(247,245,241,0.45)] text-[14px] leading-[23.8px] tracking-[-0.15px] mt-2">{{ f.description }}</p>
+              </div>
+
+              <!-- Spacer pushes gold line to bottom -->
+              <div class="feature-card__spacer"></div>
+
+              <!-- Bottom gold accent -->
+              <div class="feature-card__accent"></div>
+            </div>
+          </div>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SHOWCASE — Every feature at a glance
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-16">
+        <p class="section-label mb-4">App Showcase</p>
+        <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]">Every feature, at a glance.</h2>
+      </div>
+
+      <!-- Desktop: phone + radiating callouts -->
+      <div class="hidden lg:grid showcase-grid">
+        <!-- Left callouts -->
+        <div class="showcase-col showcase-col--left">
+          <div class="showcase-callout">
+            <span class="showcase-callout__label">Reference Scanner</span>
+            <span class="showcase-callout__line"></span>
+            <span class="showcase-callout__dot"></span>
+          </div>
+          <div class="showcase-callout">
+            <span class="showcase-callout__label">Market Value</span>
+            <span class="showcase-callout__line"></span>
+            <span class="showcase-callout__dot"></span>
+          </div>
+        </div>
+
+        <!-- Center phone -->
+        <div class="showcase-center">
+          <div class="relative w-[240px] xl:w-[280px] drop-shadow-2xl mx-auto">
+            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+              <div class="app-screen__topbar">
+                <span class="app-screen__title">Marketplace</span>
+                <span class="app-screen__count">247 listings</span>
+              </div>
+              <div class="app-screen__search">
+                <span class="app-screen__search-icon">⌕</span>
+                <span class="app-screen__search-placeholder">Search by reference…</span>
+              </div>
+              <div class="app-screen__listings">
+                @for (l of listings; track l.ref) {
+                  <div class="app-listing">
+                    <div class="app-listing__watch-icon">◉</div>
+                    <div class="app-listing__meta">
+                      <span class="app-listing__brand">{{ l.brand }}</span>
+                      <span class="app-listing__ref">{{ l.ref }}</span>
+                    </div>
+                    <span class="app-listing__price">{{ l.price }}</span>
+                  </div>
+                }
+              </div>
+              <div class="app-screen__tabbar">
+                <span class="app-tabbar__icon active">⊞</span>
+                <span class="app-tabbar__icon">♡</span>
+                <span class="app-tabbar__icon">＋</span>
+                <span class="app-tabbar__icon">◇</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right callouts -->
+        <div class="showcase-col showcase-col--right">
+          <div class="showcase-callout showcase-callout--right">
+            <span class="showcase-callout__dot"></span>
+            <span class="showcase-callout__line"></span>
+            <span class="showcase-callout__label">Watch History</span>
+          </div>
+          <div class="showcase-callout showcase-callout--right">
+            <span class="showcase-callout__dot"></span>
+            <span class="showcase-callout__line"></span>
+            <span class="showcase-callout__label">Direct Chat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom callouts (desktop) + all callouts (mobile) -->
+      <div class="lg:hidden flex flex-wrap justify-center gap-3 mt-8">
+        @for (c of showcaseCallouts; track c.label) {
+          <span class="showcase-pill">{{ c.label }}</span>
+        }
+      </div>
+      <div class="hidden lg:flex justify-center gap-6 mt-8">
+        <span class="showcase-pill">Saved Collection</span>
+        <span class="showcase-pill">Offer System</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════ -->
+  <section class="hiw-section">
+    <div class="hiw-inner">
+
+      <!-- Header -->
+      <div class="hiw-header">
+        <div class="hiw-label-pill">
+          <span class="font-inter font-normal text-[#b08527] text-[11px] tracking-[2.26px] uppercase not-italic">How It Works</span>
+        </div>
+        <p class="hiw-heading">
+          <span class="text-[#f7f5f1]">Up and trading in </span><em class="text-[#b08527]">minutes.</em>
+        </p>
+      </div>
+
+      <!-- Steps -->
+      <div class="hiw-steps">
+        <!-- Vertical connector line -->
+        <div class="hiw-connector"></div>
+
+        @for (step of steps; track step.number; let last = $last) {
+          <div class="hiw-step" [class.hiw-step--last]="last">
+
+            <!-- Number circle -->
+            <div class="hiw-circle">
+              <span class="font-inter font-medium text-[#b08527] text-[11px] tracking-[0.34px]">{{ step.number }}</span>
+            </div>
+
+            <!-- Glass card -->
+            <div class="hiw-card">
+              <div class="hiw-card__shine"></div>
+              <div class="hiw-card__bg"></div>
+              <div class="hiw-card__inset"></div>
+              <div class="hiw-card__content">
+                <p class="font-cormorant font-medium text-[#f7f5f1] text-[28px] leading-[42px]">{{ step.title }}</p>
+                <p class="font-inter font-light text-[rgba(247,245,241,0.45)] text-[14px] leading-[23.8px] tracking-[-0.15px] mt-2">{{ step.body }}</p>
+              </div>
+            </div>
+
+          </div>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BENEFITS
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+        <!-- Phone mockup -->
+        <div class="flex-shrink-0 flex justify-center">
+          <div class="relative w-[220px] sm:w-[260px] xl:w-[300px] drop-shadow-2xl">
+            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+              <div class="app-screen__topbar">
+                <span class="app-screen__title">Marketplace</span>
+                <span class="app-screen__count">247 listings</span>
+              </div>
+              <div class="app-screen__search">
+                <span class="app-screen__search-icon">⌕</span>
+                <span class="app-screen__search-placeholder">Search by reference…</span>
+              </div>
+              <div class="app-screen__listings">
+                @for (l of listings; track l.ref) {
+                  <div class="app-listing">
+                    <div class="app-listing__watch-icon">◉</div>
+                    <div class="app-listing__meta">
+                      <span class="app-listing__brand">{{ l.brand }}</span>
+                      <span class="app-listing__ref">{{ l.ref }}</span>
+                    </div>
+                    <span class="app-listing__price">{{ l.price }}</span>
+                  </div>
+                }
+              </div>
+              <div class="app-screen__tabbar">
+                <span class="app-tabbar__icon active">⊞</span>
+                <span class="app-tabbar__icon">♡</span>
+                <span class="app-tabbar__icon">＋</span>
+                <span class="app-tabbar__icon">◇</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefit list -->
+        <div class="flex-1 min-w-0 w-full max-w-[560px] mx-auto lg:mx-0">
+          <p class="section-label mb-4 text-center lg:text-left">App Benefits</p>
+          <h2 class="font-cormorant font-medium text-cb-cream text-[40px] md:text-[52px] leading-[1.1] tracking-[-0.6px] mb-8 text-center lg:text-left">Your entire operation,<br />one screen.</h2>
+          <div class="flex flex-col">
+            @for (benefit of benefits; track benefit) {
+              <div class="benefit-item">
+                <div class="benefit-item__dot"></div>
+                <span class="font-inter font-normal text-[rgba(247,245,241,0.8)] text-[15px] leading-[1.5] flex-1">{{ benefit }}</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 8H12M12 8L8 4M12 8L8 12" stroke="rgba(176,133,39,0.5)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            }
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECURITY — Built On Trust
+  ═══════════════════════════════════════════ -->
+  <section class="security-section">
+    <div class="security-inner">
+
+      <!-- SECURITY label pill -->
+      <div class="security-label-row">
+        <div class="security-label-pill">
+          <span class="font-inter font-normal text-[#b08527] text-[11px] tracking-[2.26px] uppercase not-italic">Security</span>
+        </div>
+      </div>
+
+      <!-- Shield icon -->
+      <div class="security-icon-wrap">
+        <div class="security-icon-container">
+          <img src="icon/built-on-trust.svg" alt="" class="security-icon-img" />
+          <div class="security-icon-glow"></div>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <p class="security-heading">
+        <span class="text-[#f7f5f1]">Built On </span><em class="text-[#b08527]">Trust.</em>
+      </p>
+
+      <!-- Subparagraph -->
+      <p class="security-para">Every layer of Chronobay is engineered to protect your identity, your assets, and your relationships.</p>
+
+      <!-- Cards -->
+      <div class="security-cards">
+        @for (card of securityCards; track card.title) {
+          <div class="security-card">
+            <div class="security-card__shine"></div>
+            <div class="security-card__bg"></div>
+            <div class="security-card__content">
+              <img [src]="card.icon" alt="" class="security-card__icon" />
+              <p class="security-card__title">{{ card.title }}</p>
+              <p class="security-card__desc">{{ card.description }}</p>
+            </div>
+            <div class="security-card__inset"></div>
+          </div>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       GALLERY — The experience, in full detail
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-16">
+        <p class="section-label mb-4">App Gallery</p>
+        <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] leading-[1.1] tracking-[-0.6px]">The experience, in full detail.</h2>
+      </div>
+
+      <div class="gallery-row">
+        <div class="gallery-phone gallery-phone--tilted-left">
+          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+            <div class="app-screen__topbar"><span class="app-screen__title">Marketplace</span><span class="app-screen__count">247 listings</span></div>
+            <div class="app-screen__listings app-screen__listings--compact">
+              @for (l of listings; track l.ref) {
+                <div class="app-listing app-listing--compact">
+                  <div class="app-listing__watch-icon">◉</div>
+                  <div class="app-listing__meta"><span class="app-listing__brand">{{ l.brand }}</span><span class="app-listing__ref">{{ l.ref }}</span></div>
+                  <span class="app-listing__price">{{ l.price }}</span>
+                </div>
+              }
+            </div>
+            <div class="app-screen__tabbar"><span class="app-tabbar__icon active">⊞</span><span class="app-tabbar__icon">♡</span><span class="app-tabbar__icon">＋</span><span class="app-tabbar__icon">◇</span></div>
+          </div>
+        </div>
+
+        <div class="gallery-phone gallery-phone--tilted-left-sm">
+          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+            <div class="app-screen__detail-img"><span class="app-detail__watch-icon">◉</span></div>
+            <div class="app-screen__detail-info">
+              <span class="app-detail__brand">Patek Philippe</span>
+              <span class="app-detail__model">Nautilus 5711/1A</span>
+              <div class="app-detail__price-row"><span class="app-detail__price">$68,000</span></div>
+              <button class="app-detail__cta">Make an Offer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-phone gallery-phone--tilted-right-sm">
+          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+            <div class="app-screen__chat-header">
+              <div class="app-chat__avatar">A</div>
+              <div class="app-chat__meta"><span class="app-chat__name">Ahmed Al Rashid</span><span class="app-chat__badge">● Verified Dealer</span></div>
+            </div>
+            <div class="app-screen__chat-body">
+              <div class="app-chat-bubble app-chat-bubble--left">Interested in the 5711. Is the price firm?</div>
+              <div class="app-chat-bubble app-chat-bubble--right">Best I can do is $65,500 with papers.</div>
+              <div class="app-chat__offer-card"><span class="app-chat__offer-label">Offer Sent</span><span class="app-chat__offer-price">$65,500</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-phone gallery-phone--tilted-right">
+          <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+          <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+            <div class="app-screen__topbar"><span class="app-screen__title">Collection</span><span class="app-screen__count">12 watches</span></div>
+            <div class="app-screen__listings app-screen__listings--compact">
+              @for (l of listings; track l.ref) {
+                <div class="app-listing app-listing--compact">
+                  <div class="app-listing__watch-icon">◉</div>
+                  <div class="app-listing__meta"><span class="app-listing__brand">{{ l.brand }}</span><span class="app-listing__ref">{{ l.ref }}</span></div>
+                  <span class="app-listing__price app-listing__price--up">+12%</span>
+                </div>
+              }
+            </div>
+            <div class="app-screen__tabbar"><span class="app-tabbar__icon">⊞</span><span class="app-tabbar__icon">♡</span><span class="app-tabbar__icon">＋</span><span class="app-tabbar__icon active">◇</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       DOWNLOAD CTA — Experience Luxury Trading
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#061B16]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+        <!-- Phone -->
+        <div class="flex-shrink-0 flex justify-center">
+          <div class="relative w-[220px] sm:w-[260px] xl:w-[280px] drop-shadow-2xl">
+            <img src="images/mobile.svg" alt="" class="w-full h-auto block pointer-events-none" />
+            <div class="app-screen absolute" style="top:7%;bottom:7%;left:3%;right:3%">
+              <div class="app-screen__detail-img"><span class="app-detail__watch-icon">◉</span></div>
+              <div class="app-screen__detail-info">
+                <span class="app-detail__brand">Patek Philippe</span>
+                <span class="app-detail__model">Nautilus 5711/1A</span>
+                <div class="app-detail__price-row"><span class="app-detail__price">$68,000</span><span class="app-detail__watchcharts">WatchCharts ↗</span></div>
+                <div class="app-detail__pills"><span class="app-detail__pill">2021</span><span class="app-detail__pill">Box ✓</span><span class="app-detail__pill">Papers ✓</span></div>
+                <button class="app-detail__cta">Make an Offer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copy + buttons -->
+        <div class="flex-1 min-w-0 text-center lg:text-left">
+          <p class="section-label mb-4">Ready?</p>
+          <h2 class="font-cormorant font-medium text-cb-cream text-[44px] md:text-[60px] xl:text-[72px] leading-[1.05] tracking-[-1.44px] mb-5">Experience Luxury Trading.</h2>
+          <p class="font-inter font-light text-[rgba(247,245,241,0.5)] text-[16px] leading-[1.7] max-w-[400px] mx-auto lg:mx-0 mb-8">Join a private marketplace where discretion, quality, and trust define every transaction.</p>
+          <div class="flex items-center justify-center lg:justify-start gap-4 flex-wrap mb-6">
+            <button class="glass-btn">Apply for Membership →</button>
+          </div>
+          <div class="flex items-center justify-center lg:justify-start gap-3 flex-wrap">
+            <a href="#" class="block h-[44px]"><img src="images/ios-store.png" alt="Download on the App Store" class="h-full w-auto object-contain" /></a>
+            <a href="#" class="block h-[44px]"><img src="images/play-store.png" alt="Get it on Google Play" class="h-full w-auto object-contain" /></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TRUSTED BY THE BEST
+  ═══════════════════════════════════════════ -->
+  <section class="py-24 px-4 bg-[#112822]">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="text-center mb-20">
+        <p class="section-label mb-5">Voice Of The Communities</p>
+        <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] xl:text-[72px] leading-[1.1] tracking-[-1.44px]">Trusted by the Best</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        @for (t of testimonials; track t.name) {
+          <div class="glass-card p-10 flex flex-col">
+            <div class="glass-card-shine"></div>
+            <div class="glass-card-content flex flex-col gap-6 flex-1">
+              <div class="flex items-center gap-[6px]">
+                <img src="icon/rating.png" alt="5 stars" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="" class="h-[18px] w-auto object-contain" />
+                <img src="icon/rating.png" alt="" class="h-[18px] w-auto object-contain" />
+              </div>
+              <p class="font-inter font-light text-[rgba(247,245,241,0.9)] text-[15px] leading-[23.8px] flex-1">"{{ t.quote }}"</p>
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full bg-[rgba(176,133,39,0.12)] border border-[rgba(176,133,39,0.3)] flex items-center justify-center flex-shrink-0">
+                  <span class="font-cormorant font-medium text-cb-gold text-[20px]">{{ t.initial }}</span>
+                </div>
+                <div>
+                  <p class="font-cormorant font-medium text-cb-cream text-[20px] leading-[42px] tracking-[-0.28px]">{{ t.name }}</p>
+                  <p class="font-inter font-light text-[rgba(247,245,241,0.6)] text-[15px] leading-[23.8px]">{{ t.role }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <app-faq />
+
+  <app-future-cta />
+
+  <app-industry-leaders />
+
+  <app-footer />
+
+</div>
