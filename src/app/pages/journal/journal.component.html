@@ -1,0 +1,117 @@
+<div class="journal-page bg-cb-green min-h-screen font-inter text-cb-cream">
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <div class="px-3 py-3 sm:px-5 sm:pt-5 xl:px-[34px] xl:py-[35px]">
+    <div class="rounded-2xl sm:rounded-[32px] xl:rounded-[42px] overflow-hidden bg-[#0A382B] relative">
+      <app-header />
+
+      <section class="relative overflow-hidden">
+        <div class="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-16 w-full"
+             style="padding-top: clamp(56px,9vw,118px); padding-bottom: clamp(56px,9vw,128px)">
+          <div class="flex flex-col xl:flex-row items-center gap-10 xl:gap-16">
+
+            <!-- ── Left copy ── -->
+            <div class="flex-1 min-w-0 flex flex-col items-center xl:items-start text-center xl:text-left gap-8">
+
+              <!-- GoldLabel breadcrumb -->
+              <div class="flex items-center gap-2">
+                <span class="block w-4 h-px bg-cb-gold opacity-60"></span>
+                <span class="font-inter font-normal text-cb-gold text-[10px] leading-[15px] tracking-[2.92px] uppercase">Chronobay Journal</span>
+                <span class="block w-4 h-px bg-cb-gold opacity-60"></span>
+              </div>
+
+              <!-- Heading -->
+              <h1 class="font-cormorant font-medium text-cb-cream leading-[1.0] tracking-[-0.025em]"
+                  style="font-size: clamp(44px, 5.2vw, 100px)">
+                Perspectives on<br />
+                Time, <em class="text-cb-gold not-italic" style="font-style: italic">Value</em><br />
+                and Collecting.
+              </h1>
+
+              <!-- Paragraph -->
+              <p class="font-inter font-light text-[rgba(247,245,241,0.42)] max-w-[561px]"
+                 style="font-size: 17px; line-height: 31.45px; letter-spacing: -0.43px">
+                Explore market intelligence, collector stories, horological knowledge and
+                the ideas shaping the future of luxury watch trading.
+              </p>
+
+              <!-- CTA -->
+              <a href="#" class="inline-flex items-center gap-3 group">
+                <span class="font-inter font-medium text-cb-cream text-[14px] leading-[21px] tracking-[-0.15px] group-hover:text-cb-gold transition-colors duration-200">Explore Latest Stories</span>
+                <span class="font-inter font-medium text-cb-gold text-[14px] leading-[21px] tracking-[-0.15px]">→</span>
+              </a>
+
+            </div>
+
+            <!-- ── Right: watch card ── -->
+            <div class="flex-shrink-0 flex justify-center xl:justify-end">
+              <div class="journal-watch-card">
+                <div class="journal-watch-card__bg" aria-hidden="true"></div>
+                <div class="journal-watch-card__shine-diagonal" aria-hidden="true"></div>
+                <div class="journal-watch-card__shine-top" aria-hidden="true"></div>
+                <div class="journal-watch-card__gold-orb" aria-hidden="true"></div>
+                <img src="images/journal-hero-watch.svg" alt="Chronobay watch" class="journal-watch-card__clock" />
+                <div class="journal-watch-card__inset" aria-hidden="true"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       THE JOURNAL
+  ═══════════════════════════════════════════ -->
+  <section class="pt-24 pb-36 px-6 bg-[#0C1E19]">
+    <div class="max-w-[1296px] mx-auto">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <p class="section-label mb-5">THE PROCESS</p>
+          <h2 class="font-cormorant font-medium text-cb-cream text-[48px] md:text-[60px] xl:text-[72px] leading-[1.05] tracking-[-1.44px]">The Journal</h2>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        @for (article of articles; track article.title; let i = $index) {
+          <a [routerLink]="['/journal', i]" class="journal-card block cursor-pointer">
+            <div class="journal-img"></div>
+            <div class="p-7 pt-6 flex flex-col gap-4">
+              <p class="section-label">{{ article.category }}</p>
+              <p class="font-cormorant font-medium text-cb-cream text-[25px] leading-[normal]">{{ article.title }}</p>
+              <p class="font-inter font-light text-[rgba(247,245,241,0.6)] text-[15px] leading-[23.8px]">{{ article.excerpt }}</p>
+              <div class="flex items-center justify-between pt-1">
+                <span class="section-label">Read More</span>
+                <span class="section-label">{{ article.date }}</span>
+              </div>
+            </div>
+          </a>
+        }
+
+      </div>
+
+      <div class="flex justify-center gap-3">
+        <div class="sj-circle">
+          <span class="sj-circle__num">{{ "1" }}</span>
+        </div>
+
+        <div class="sj-circle">
+          <span class="sj-circle__num">{{ "2" }}</span>
+        </div>
+
+        <div class="sj-circle">
+          <span class="sj-circle__num">{{ "3" }}</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SHARED SECTIONS ═══ -->
+  <app-faq />
+  <app-future-cta />
+  <app-industry-leaders />
+  <app-footer />
+</div>

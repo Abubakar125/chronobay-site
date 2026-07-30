@@ -1,0 +1,445 @@
+// ─── Send Us a Message ────────────────────────────────────────────────────────
+
+.cf-section {
+  background: #061e18;
+  padding: clamp(64px, 8vw, 112px) clamp(16px, 4vw, 56px);
+  display: flex;
+  justify-content: center;
+}
+
+.cf-card {
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 0.741px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 24px 64px 0px rgba(0, 0, 0, 0.35);
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__top-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.995px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    padding: clamp(28px, 5vw, 57px);
+  }
+}
+
+// ─── Card header ──────────────────────────────────────────────────────────────
+
+.cf-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #b08527;
+  letter-spacing: 3.117px;
+  text-transform: uppercase;
+}
+
+.cf-heading {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 500;
+  color: #f7f5f1;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+// ─── Form ─────────────────────────────────────────────────────────────────────
+
+.cf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+}
+
+.cf-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 540px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cf-field {
+  width: 100%;
+}
+
+.cf-input {
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.741px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 0 21px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #f7f5f1;
+  letter-spacing: -0.234px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &::placeholder {
+    color: rgba(247, 245, 241, 0.28);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.15px;
+  }
+
+  &:focus {
+    border-color: rgba(176, 133, 39, 0.35);
+  }
+}
+
+.cf-textarea {
+  width: 100%;
+  min-height: 185px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 0.741px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 21px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #f7f5f1;
+  letter-spacing: -0.234px;
+  line-height: 1.5;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s ease;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &::placeholder {
+    color: rgba(247, 245, 241, 0.28);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: -0.15px;
+  }
+
+  &:focus {
+    border-color: rgba(176, 133, 39, 0.35);
+  }
+}
+
+// ─── Form footer ──────────────────────────────────────────────────────────────
+
+.cf-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cf-privacy {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(247, 245, 241, 0.2);
+  letter-spacing: 0.065px;
+  white-space: nowrap;
+}
+
+.cf-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(176, 133, 39, 0.14);
+  border: 0.741px solid rgba(176, 133, 39, 0.45);
+  border-radius: 100px;
+  padding: 17px 33px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #b08527;
+  letter-spacing: 0.724px;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0px 0px 30px 0px rgba(176, 133, 39, 0.07);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: rgba(176, 133, 39, 0.22);
+    box-shadow: 0px 0px 40px 0px rgba(176, 133, 39, 0.12);
+  }
+
+  &__arrow {
+    font-size: 16px;
+    letter-spacing: 0.488px;
+  }
+}
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+
+.cu-hero {
+  &__glow {
+    position: absolute;
+    top: -200px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(176, 133, 39, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+// ─── Outline button ───────────────────────────────────────────────────────────
+
+.cu-btn-outline {
+  background: rgba(247, 245, 241, 0.05);
+  border: 0.723px solid rgba(247, 245, 241, 0.18);
+  border-radius: 100px;
+  padding: 14px 32px;
+  color: rgba(247, 245, 241, 0.75);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.78px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background: rgba(247, 245, 241, 0.1);
+    border-color: rgba(247, 245, 241, 0.3);
+  }
+}
+
+// ─── Get In Touch section ─────────────────────────────────────────────────────
+
+.git-section {
+  padding: clamp(64px, 8vw, 104px) clamp(16px, 4vw, 48px);
+  background: #061e18;
+}
+
+.git-reach-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  color: #b08527;
+  letter-spacing: 3.117px;
+  text-transform: uppercase;
+}
+
+.git-card {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 0.741px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 24px 64px 0px rgba(0, 0, 0, 0.35);
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  &__top-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.995px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    padding: 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    min-height: 248px;
+  }
+
+  &__icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: rgba(176, 133, 39, 0.08);
+    border: 0.741px solid rgba(176, 133, 39, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(247, 245, 241, 0.28);
+    letter-spacing: 2.117px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  &__main {
+    font-size: 22px;
+    font-weight: 500;
+    color: #f7f5f1;
+    line-height: 30.25px;
+    margin: 0;
+  }
+
+  &__sub {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(247, 245, 241, 0.38);
+    line-height: 19.5px;
+    letter-spacing: -0.076px;
+    margin: 0;
+  }
+
+  &__spacer {
+    flex: 1 0 0;
+    min-height: 1px;
+  }
+
+  &__divider {
+    height: 0.995px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(176, 133, 39, 0.30) 0%,
+      rgba(176, 133, 39, 0.28) 7.14%,
+      rgba(176, 133, 39, 0.26) 14.29%,
+      rgba(176, 133, 39, 0.24) 21.43%,
+      rgba(176, 133, 39, 0.21) 28.57%,
+      rgba(176, 133, 39, 0.19) 35.71%,
+      rgba(176, 133, 39, 0.17) 42.86%,
+      rgba(176, 133, 39, 0.15) 50%,
+      rgba(176, 133, 39, 0.13) 57.14%,
+      rgba(176, 133, 39, 0.11) 64.29%,
+      rgba(176, 133, 39, 0.09) 71.43%,
+      rgba(176, 133, 39, 0.06) 78.57%,
+      rgba(176, 133, 39, 0.04) 85.71%,
+      rgba(176, 133, 39, 0.02) 92.86%,
+      rgba(176, 133, 39, 0.00) 100%
+    );
+    flex-shrink: 0;
+  }
+}
+
+// ─── Logo card ────────────────────────────────────────────────────────────────
+
+.cu-logo-card {
+  position: relative;
+  width: clamp(280px, 32vw, 420px);
+  aspect-ratio: 1;
+  border-radius: clamp(20px, 3vw, 36px);
+  overflow: hidden;
+  border: 0.723px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0px 60px 120px 0px rgba(0, 0, 0, 0.5),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06);
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: #061e18;
+    z-index: 0;
+  }
+
+  &__shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03), transparent);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
