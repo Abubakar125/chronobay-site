@@ -1,0 +1,80 @@
+// Journal Detail styles
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
+
+.jd-italic {
+  font-style: italic;
+}
+
+.jd-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(247, 245, 241, 0.45);
+  letter-spacing: -0.2px;
+
+  &__sep {
+    opacity: 0.35;
+  }
+}
+
+.jd-hero-img-wrap {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 0.741px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0px 60px 120px 0px rgba(0, 0, 0, 0.55),
+    inset 0px 1px 0px 0px rgba(255, 255, 255, 0.06);
+
+  @media (min-width: 640px) {
+    border-radius: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    border-radius: 28px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+// ─── Article body ─────────────────────────────────────────────────────────────
+
+.jd-article {
+  p {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: -0.22px;
+    color: #f7f5f1;
+    margin: 0 0 28px;
+    word-break: break-word;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    letter-spacing: -0.22px;
+    color: #f7f5f1;
+    margin: 44px 0 6px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

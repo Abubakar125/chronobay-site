@@ -44,9 +44,8 @@ export class NavMenuComponent implements OnDestroy {
     { label: 'App',                  route: '/app',            gold: false },
     { label: 'How It Works',         route: '/how-it-works',   gold: false },
     { label: 'Journal',              route: '/journal',        gold: false },
-    { label: 'Newsletter',           route: null,              gold: false },
-    { label: 'Login',                route: null,              gold: false },
-    { label: 'Apply For Membership', route: null,              gold: true  },
-    { label: 'Download App',         route: null,              gold: true  },
+    { label: 'Contact Us',           route: '/contact-us',     gold: false },
+    { label: 'Login',                route: null,              gold: true,  href: 'https://dashboard.chronobay.ae/login' },
+    { label: 'Apply For Membership', route: null,              gold: true,  href: 'https://dashboard.chronobay.ae/dealer-registration' },
   ];
 }

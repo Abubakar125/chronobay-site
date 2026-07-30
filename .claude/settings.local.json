@@ -9,7 +9,8 @@
       "mcp__plugin_figma_figma__use_figma",
       "Bash(curl -L -o \"C:\\\\Users\\\\abuba\\\\AppData\\\\Local\\\\Temp\\\\app-shot3.png\" \"https://www.figma.com/api/mcp/asset/125ab274-9550-4856-929f-ad36c8b85515\")",
       "Bash(curl -L -o \"C:\\\\Users\\\\abuba\\\\AppData\\\\Local\\\\Temp\\\\app-shot4.png\" \"https://www.figma.com/api/mcp/asset/61e43d4f-9790-4f6a-a441-4a24a3fe78f0\")",
-      "Bash(curl -L -o \"C:\\\\Users\\\\abuba\\\\AppData\\\\Local\\\\Temp\\\\cta.png\" \"https://www.figma.com/api/mcp/asset/1a25145a-21b6-4c12-81d7-737d8380b46d\")"
+      "Bash(curl -L -o \"C:\\\\Users\\\\abuba\\\\AppData\\\\Local\\\\Temp\\\\cta.png\" \"https://www.figma.com/api/mcp/asset/1a25145a-21b6-4c12-81d7-737d8380b46d\")",
+      "mcp__plugin_figma_figma__get_metadata"
     ]
   }
 }

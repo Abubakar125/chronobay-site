@@ -20,6 +20,17 @@
             [class.nav-link--animate]="visible()"
             (click)="close()"
           >{{ link.label }}</a>
+        } @else if (link.href) {
+          <a
+            [href]="link.href"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-link"
+            [class.nav-link--gold]="link.gold"
+            [style.animation-delay]="visible() ? i * 55 + 'ms' : '0ms'"
+            [class.nav-link--animate]="visible()"
+            (click)="close()"
+          >{{ link.label }}</a>
         } @else {
           <a
             href="#"
