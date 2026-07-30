@@ -24,11 +24,11 @@ export class HowItWorksComponent {
   collectorFeatures = ['Fair Pricing', 'Verified Sellers', 'Market Transparency'];
 
   sellerSteps = [
-    { num: '01', title: 'Create Account',        desc: 'Sign up with your professional credentials. Government-verified registration for dealers and collectors.' },
-    { num: '02', title: 'Verify Identity',        desc: 'Complete UAE PASS or International KYC. The process is fast, secure, and required for all members.' },
-    { num: '03', title: 'List Your Watch',        desc: 'Enter a reference number. Specifications auto-fill from our database — saving time on every listing.' },
-    { num: '04', title: 'Receive Offers',         desc: 'Qualified buyers message you directly. Negotiate price and terms in private, without intermediaries.' },
-    { num: '05', title: 'Complete Transaction',   desc: 'Agree terms, transfer ownership securely. Zero commission — you keep 100% of every sale.' },
+    { num: '01', title: 'Create Account',        desc: 'Sign up with your professional credentials. Government identity verification begins immediately.' },
+    { num: '02', title: 'Verify Identity',        desc: 'Complete UAE PASS or International KYC. The process takes under five minutes.' },
+    { num: '03', title: 'List Your Watch',        desc: 'Enter a reference number. Specifications auto-fill. Our AI assists with description, condition grading and suggested pricing.' },
+    { num: '04', title: 'Receive Offers',         desc: 'Qualified buyers message you directly. Negotiate privately with verified counterparties — no intermediaries.' },
+    { num: '05', title: 'Complete Transaction',   desc: 'Agree terms, transfer ownership securely. Zero commission deducted. The full amount is yours.' },
   ];
 
   buyerSteps = [
@@ -40,30 +40,30 @@ export class HowItWorksComponent {
   ];
 
   verificationCards = [
-    { icon: 'icon/identity-verification.png', title: 'Identity Verification',  desc: 'Government-grade ID check via UAE PASS or international KYC ensures every member is verified.' },
-    { icon: 'icon/small-inventory.png',        title: 'Watch Authentication',   desc: 'Sellers must confirm ownership and provenance. Every piece is documented before listing goes live.' },
-    { icon: 'icon/rating.png',                 title: 'Seller Review',          desc: 'Professional approval process for dealers. Reputation-based access keeps quality standards high.' },
-    { icon: 'icon/security-ecosystem.png',     title: 'Marketplace Protection', desc: 'The entire ecosystem is secured. Every transaction is monitored and fully traceable.' },
+    { icon: 'icon/uae-pass.png',               title: 'Identity Verification',  desc: 'Government-grade ID check via UAE PASS or international KYC providers. Every member, every time.' },
+    { icon: 'icon/watch-authentication.png',   title: 'Watch Authentication',   desc: 'Sellers must confirm ownership and provenance. Every listed piece is traceable.' },
+    { icon: 'icon/rating.png',                 title: 'Seller Review',          desc: 'Professional approval process for dealers. Reputation and history are reviewed before listing access.' },
+    { icon: 'icon/marketplace-protection.png', title: 'Marketplace Protection', desc: 'The entire ecosystem is secured. Every transaction, every message, every member — protected.' },
   ];
 
   marketCards = [
-    { icon: 'icon/watch-charts-integration.png', title: 'WatchCharts™ Integration', badge: 'Real-time',    desc: "Live bid/ask data from the world's leading watch pricing platform, embedded in every listing." },
-    { icon: 'icon/historical-performance.png',    title: 'Historical Prices',        badge: '10yr data',    desc: 'Multi-year sale history for every reference number to inform smarter buying and selling.' },
-    { icon: 'icon/live-maker.png',                title: 'Fair Market Value',         badge: '±2% accuracy', desc: 'Clear value bands help buyers benchmark offers and sellers price with full confidence.' },
+    { icon: 'icon/chart-integration.png', title: 'WatchCharts™ Integration', badge: 'Real-time',    desc: "Live bid/ask data from the world's leading watch pricing platform, embedded directly in every listing." },
+    { icon: 'icon/realtime-market.png',   title: 'Historical Prices',        badge: '10yr data',    desc: "Multi-year sale history for every reference number. Understand where value has been to see where it's going." },
+    { icon: 'icon/fair-market.png',       title: 'Fair Market Value',        badge: '±2% accuracy', desc: 'Clear value bands help buyers benchmark offers and help sellers price competitively and confidently.' },
   ];
 
   whyCards = [
-    { icon: 'icon/zero-commission.png',        title: 'Zero Commission',       desc: 'We earn from membership — not from your deals. Every transaction stays 100% yours, always.' },
-    { icon: 'icon/identity-verification.png',  title: 'Verified Members',      desc: 'Every buyer and seller is identity-verified before they join. No exceptions, no anonymous accounts.' },
-    { icon: 'icon/direct-offers.png',          title: 'Direct Communication',  desc: 'Message counterparties without intermediaries. Relationship-first marketplace design.' },
-    { icon: 'icon/watch-chart.png',            title: 'Transparent Pricing',   desc: 'Live market data in every listing ensures both parties are informed and fairly positioned.' },
+    { icon: 'icon/zero-commissions.png',       title: 'Zero Commission',       desc: 'We earn from membership — not from your deals. Every dollar of your sale price stays with you.' },
+    { icon: 'icon/verified-member.png',        title: 'Verified Members',      desc: 'Every buyer and seller is identity-verified before accessing the platform. No exceptions.' },
+    { icon: 'icon/direct-communication.png',   title: 'Direct Communication',  desc: 'Message counterparties without intermediaries. Relationships built on conversation, not abstraction.' },
+    { icon: 'icon/transparent-pricing.png',    title: 'Transparent Pricing',   desc: 'Live market data in every listing ensures both parties start from a position of informed confidence.' },
   ];
 
   securityCards = [
-    { icon: 'icon/security-ecosystem.png',    title: 'Encrypted Data',      desc: 'All personal data and communications encrypted at rest and in transit at all times.' },
-    { icon: 'icon/direct-offers.png',         title: 'Private Messaging',   desc: 'End-to-end encrypted messaging between verified members only — never public or visible.' },
-    { icon: 'icon/global-access.png',         title: 'Secure Payments',     desc: 'Transactions processed through regulated financial institutions with full audit trails.' },
-    { icon: 'icon/identity-verification.png', title: 'Verified Community',  desc: 'Every member is KYC-verified. No anonymous accounts are permitted on the platform.' },
+    { icon: 'icon/encrypted.png',          title: 'Encrypted Data',      desc: 'All personal data and communications encrypted at rest and in transit at all times.' },
+    { icon: 'icon/private.png',            title: 'Private Messaging',   desc: 'End-to-end encrypted messaging between verified members only — never public or visible.' },
+    { icon: 'icon/secure-payment.png',     title: 'Secure Payments',     desc: 'Transactions processed through regulated financial institutions with full audit trails.' },
+    { icon: 'icon/verified-community.png', title: 'Verified Community',  desc: 'Every member is KYC-verified. No anonymous accounts are permitted on the platform.' },
   ];
 
   journeySteps = [

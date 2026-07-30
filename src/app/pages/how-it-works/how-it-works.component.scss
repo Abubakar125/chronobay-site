@@ -1,13 +1,324 @@
 // ─── Hero ────────────────────────────────────────────────────────────────────
 
 .hiw-hero {
-  background: linear-gradient(170deg, #082a21 8%, #0a382b 54%, #061e18 91%);
-
   &__glow {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 900px 700px at 50% 40%, rgba(176, 133, 39, 0.05) 0%, transparent 70%);
+    // background: radial-gradient(ellipse 900px 700px at 50% 40%, rgba(176, 133, 39, 0.05) 0%, transparent 70%);
     pointer-events: none;
+  }
+}
+
+// ─── Hero watch card ─────────────────────────────────────────────────────────
+
+.hiw-watch-card {
+  position: relative;
+  width: 200px;
+  height: 222px;
+  border-radius: 36px;
+  border: 0.741px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @media (min-width: 640px) {
+    width: 240px;
+    height: 267px;
+    border-radius: 38px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 288px;
+    height: 320px;
+    border-radius: 40px;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &__shine-diagonal {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(131.98deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+  }
+
+  &__shine-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+    pointer-events: none;
+  }
+
+  &__gold-orb {
+    position: absolute;
+    width: 89%;
+    height: 80%;
+    left: 5.3%;
+    top: 9.77%;
+    border-radius: 50%;
+    background: rgba(176, 133, 39, 0.12);
+    filter: blur(80px);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  // Positioned container so the image can use %-based negative insets
+  &__watch-wrap {
+    position: absolute;
+    left: 15.02%;   // 43.26 / 288
+    top: 12.27%;    // 39.26 / 320
+    width: 69.44%;  // 199.99 / 288
+    height: 75%;    // 239.995 / 320
+  }
+
+  // Negative insets let the SVG's built-in drop-shadow render before the card clips it
+  &__watch-img {
+    position: absolute;
+    inset: -24% -82.25% -33.33% -31%;
+    width: calc(100% + 50% + 12%);
+    // height: calc(100% + 41.67% + 58.33%);
+    max-width: none;
+    display: block;
+  }
+
+  &__bottom-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20%;
+    background: linear-gradient(to top, rgba(176, 133, 39, 0.04), rgba(176, 133, 39, 0));
+    pointer-events: none;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow:
+      inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+      inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+// ─── Seller Journey ──────────────────────────────────────────────────────────
+
+.sj-section {
+  background: #061e18;
+  padding: 100px 24px;
+}
+
+.sj-inner {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+.sj-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sj-content {
+  position: relative;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+// ─── SJ Timeline ─────────────────────────────────────────────────────────────
+
+.sj-timeline {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.sj-connector {
+  position: absolute;
+  left: 19.99px;
+  top: 39.99px;
+  width: 1px;
+  bottom: 40px;
+  background: linear-gradient(
+    180deg,
+    rgba(176, 133, 39, 0.6) 0%,
+    rgba(176, 133, 39, 0.2) 50%,
+    rgba(176, 133, 39, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.sj-step {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding-bottom: 40px;
+
+  &--last {
+    padding-bottom: 0;
+  }
+}
+
+.sj-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #b08527;
+  border: 1.482px solid #b08527;
+  box-shadow: 0px 0px 12px rgba(176, 133, 39, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;
+
+  &--last {
+    background: rgba(176, 133, 39, 0.1);
+    box-shadow: 0px 0px 24px 0px rgba(176, 133, 39, 0.35);
+  }
+
+  &__num {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.37px;
+
+    .sj-circle--last & {
+      color: #b08527;
+    }
+  }
+}
+
+.sj-card {
+  flex: 1;
+  position: relative;
+  border: 0.741px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  box-shadow: 0px 32px 80px 0px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
+  &__shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    padding: 29px;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 500;
+    color: #f7f5f1;
+    line-height: 1.375;
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(247, 245, 241, 0.45);
+    line-height: 1.7;
+    letter-spacing: -0.15px;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+// ─── SJ App illustration column ──────────────────────────────────────────────
+
+.sj-phone-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+
+  @media (min-width: 1024px) {
+    position: sticky;
+    top: 96px;
+  }
+}
+
+.sj-app-img {
+  width: 220px;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  filter: drop-shadow(0px 60px 120px rgba(0, 0, 0, 0.7)) drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.5));
+
+  @media (min-width: 640px) {
+    width: 260px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 280px;
+  }
+}
+
+// ─── Buyer Journey ───────────────────────────────────────────────────────────
+
+.bj-section {
+  background: linear-gradient(180deg, rgb(6, 30, 24) 0%, rgb(8, 42, 33) 100%);
+  padding: 100px 24px;
+}
+
+.bj-content {
+  position: relative;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
   }
 }
 
@@ -261,20 +572,529 @@
   flex-shrink: 0;
 }
 
-// ─── Step Circle (Complete Experience) ───────────────────────────────────────
+// ─── Complete Experience / 6-Step Timeline ───────────────────────────────────
 
-.step-circle {
-  width: 96px;
-  height: 96px;
+.ce-section {
+  background: linear-gradient(
+    180deg,
+    #082a21 0%,
+    #08281f 17%,
+    #07261e 33%,
+    #07241c 50%,
+    #07221b 67%,
+    #062019 83%,
+    #061e18 100%
+  );
+}
+
+.ce-timeline-wrap {
+  // no overflow
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.ce-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
+
+.ce-line {
+  position: absolute;
+  // vertical line on mobile
+  left: 19.5px;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  height: auto;
+  background: linear-gradient(
+    180deg,
+    rgba(176, 133, 39, 0) 0%,
+    rgba(176, 133, 39, 0.15) 15%,
+    rgba(176, 133, 39, 0.4) 50%,
+    rgba(176, 133, 39, 0.15) 85%,
+    rgba(176, 133, 39, 0) 100%
+  );
+  pointer-events: none;
+
+  @media (min-width: 1024px) {
+    // horizontal line on desktop
+    left: 20px;
+    right: 20px;
+    top: 19.5px;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(176, 133, 39, 0) 0%,
+      rgba(176, 133, 39, 0.15) 15%,
+      rgba(176, 133, 39, 0.4) 50%,
+      rgba(176, 133, 39, 0.15) 85%,
+      rgba(176, 133, 39, 0) 100%
+    );
+  }
+}
+
+.ce-step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.ce-circle {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(176, 133, 39, 0.06);
-  border: 0.845px solid rgba(176, 133, 39, 0.2);
+  background: rgba(176, 133, 39, 0.1);
+  border: 1.482px solid #b08527;
+  box-shadow: 0px 0px 20px 0px rgba(176, 133, 39, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 1;
   flex-shrink: 0;
+
+  &__num {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #b08527;
+    letter-spacing: 0.12px;
+  }
+}
+
+.ce-pill {
+  position: relative;
+  border: 0.741px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  box-shadow: 0px 32px 80px 0px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
+  &__shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &__label {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 12px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #f7f5f1;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: -0.08px;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+// ─── Trust / Verification section ───────────────────────────────────────────
+
+.trust-section {
+  background: linear-gradient(
+    180deg,
+    #082a21 0%,
+    #08281f 17%,
+    #07261e 33%,
+    #07241c 50%,
+    #07221b 67%,
+    #062019 83%,
+    #061e18 100%
+  );
+}
+
+// ─── Trust cards (Verification section) ─────────────────────────────────────
+
+.trust-card {
+  position: relative;
+  border: 0.741px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  box-shadow: 0px 32px 80px 0px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
+  &__shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px;
+    min-height: 281px;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &__accent {
+    margin-top: auto;
+    width: 24px;
+    height: 1px;
+    background: rgba(176, 133, 39, 0.35);
+    flex-shrink: 0;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+// ─── What Sets Us Apart section ──────────────────────────────────────────────
+
+.why-section {
+  background: linear-gradient(
+    180deg,
+    #061e18 0%,
+    #062019 17%,
+    #07221b 33%,
+    #07241c 50%,
+    #07261e 67%,
+    #08281f 83%,
+    #082a21 100%
+  );
+}
+
+.why-watch-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 320px;
+}
+
+.why-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(176, 133, 39, 0.06);
+  filter: blur(120px);
+  pointer-events: none;
+}
+
+.why-watch-outer {
+  position: absolute;
+  width: 294px;
+  height: 326px;
+  border-radius: 40.8px;
+  border: 0.756px solid rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.why-watch-card {
+  position: relative;
+  width: 288px;
+  height: 320px;
+  border-radius: 40px;
+  border: 0.741px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transform: rotate(-0.31deg);
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &__shine-diagonal {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(131.98deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 50%);
+    pointer-events: none;
+  }
+
+  &__shine-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+    pointer-events: none;
+  }
+
+  &__gold-orb {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    left: 15.25px;
+    top: 31.25px;
+    border-radius: 50%;
+    background: rgba(176, 133, 39, 0.12);
+    filter: blur(80px);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  &__watch-wrap {
+    position: absolute;
+    left: 43.26px;
+    top: 39.26px;
+    width: 199.99px;
+    height: 239.995px;
+  }
+
+  &__watch-img {
+    position: absolute;
+    inset: -24% -82.25% -33.33% -31%;
+    width: calc(100% + 50% + 12%);
+    // height: calc(100% + 41.67% + 58.33%);
+    max-width: none;
+    display: block;
+  }
+
+  &__bottom-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 64px;
+    background: linear-gradient(to top, rgba(176, 133, 39, 0.04), rgba(176, 133, 39, 0));
+    pointer-events: none;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow:
+      inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1),
+      inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+// ─── Why cards (2×2 grid) ────────────────────────────────────────────────────
+
+.why-card {
+  position: relative;
+  border: 0.741px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  box-shadow: 0px 32px 80px 0px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
+  &__shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+// ─── Market Intelligence cards ───────────────────────────────────────────────
+
+.market-card {
+  position: relative;
+  border: 0.741px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  box-shadow: 0px 32px 80px 0px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
+  &__shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+  }
+
+  &__top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: rgba(176, 133, 39, 0.08);
+    border: 0.741px solid rgba(176, 133, 39, 0.15);
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: #b08527;
+    letter-spacing: 1.06px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  &__inset {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+    z-index: 3;
+  }
+}
+
+// ─── Security section ────────────────────────────────────────────────────────
+
+.security-section {
+  position: relative;
+  background: #082a21;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: rgba(176, 133, 39, 0.04);
+    filter: blur(120px);
+    pointer-events: none;
+  }
+
+  &__shield {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+  }
 }
 
 // ─── Shared label ─────────────────────────────────────────────────────────────

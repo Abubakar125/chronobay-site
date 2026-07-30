@@ -43,7 +43,7 @@ export class NavMenuComponent implements OnDestroy {
     { label: 'Why Chronobay',        route: '/why-chronobay',  gold: false },
     { label: 'App',                  route: '/app',            gold: false },
     { label: 'How It Works',         route: '/how-it-works',   gold: false },
-    { label: 'Journal',              route: null,              gold: false },
+    { label: 'Journal',              route: '/journal',        gold: false },
     { label: 'Newsletter',           route: null,              gold: false },
     { label: 'Login',                route: null,              gold: false },
     { label: 'Apply For Membership', route: null,              gold: true  },
