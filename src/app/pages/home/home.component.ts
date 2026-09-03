@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { FaqComponent } from '../../shared/faq/faq.component';
@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   heroSlide = 0;
   private heroSlideTimer: any;
 
+  @ViewChild('brandSliderRef') brandSliderRef!: ElementRef;
+
   ngOnInit() {
     this.heroSlideTimer = setInterval(() => {
       this.heroSlide = this.heroSlide === 0 ? 1 : 0;
@@ -24,6 +26,11 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     clearInterval(this.heroSlideTimer);
+  }
+
+  slideBrands(dir: number) {
+    const el = this.brandSliderRef?.nativeElement;
+    if (el) el.scrollBy({ left: dir * 320, behavior: 'smooth' });
   }
 
   brands = [
@@ -38,6 +45,19 @@ export class HomeComponent implements OnInit, OnDestroy {
     { name: 'Rolex',   logo: 'images/brand-rolex.svg'   },
   ];
 
+  watchBrands = [
+    { name: 'Rolex',       watchImg: 'images/watch-left.svg',  appLink: 'https://chronobay.ae/brand/rolex' },
+    { name: 'Alpina',      watchImg: 'images/watch-right.svg', appLink: 'https://chronobay.ae/brand/alpina' },
+    { name: 'Amida',       watchImg: 'images/watch-left.svg',  appLink: 'https://chronobay.ae/brand/amida' },
+    { name: 'Anonimo',     watchImg: 'images/watch-right.svg', appLink: 'https://chronobay.ae/brand/anonimo' },
+    { name: 'Cartier',     watchImg: 'images/watch-left.svg',  appLink: 'https://chronobay.ae/brand/cartier' },
+    { name: 'Armin Strom', watchImg: 'images/watch-right.svg', appLink: 'https://chronobay.ae/brand/armin-strom' },
+    { name: 'IWC',         watchImg: 'images/watch-left.svg',  appLink: 'https://chronobay.ae/brand/iwc' },
+    { name: 'Breitling',   watchImg: 'images/watch-right.svg', appLink: 'https://chronobay.ae/brand/breitling' },
+    { name: 'Hublot',      watchImg: 'images/watch-left.svg',  appLink: 'https://chronobay.ae/brand/hublot' },
+    { name: 'Panerai',     watchImg: 'images/watch-right.svg', appLink: 'https://chronobay.ae/brand/panerai' },
+  ];
+
   stats = [
     { value: '0%',   label: 'Commission',      sub: 'Always' },
     { value: '100%', label: 'Verified Members', sub: 'No Exceptions' },
@@ -46,10 +66,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   ];
 
   steps = [
-    { num: '01', title: 'Verify Identity',      desc: "Complete a secure identity check powered by UAE PASS. Your credentials are verified once — then you're in for life." },
-    { num: '02', title: 'List Or Discover',     desc: 'List your timepieces with reference-number autofill and market-accurate pricing, or browse thousands of verified pieces.' },
-    { num: '03', title: 'Negotiate Directly',   desc: 'Connect peer-to-peer with verified buyers and sellers. No intermediaries, no commissions, no friction.' },
-    { num: '04', title: 'Complete Transaction', desc: 'Close deals with confidence through our secure escrow-guided transaction framework built for high-value trades.' },
+    { num: '01', title: 'Verify Your Identity',            desc: 'Complete secure identity verification to join ChronoBay and buy or sell pre-owned luxury watches with verified dealers and collectors.' },
+    { num: '02', title: 'Find Luxury Watches for Sale',    desc: 'Browse pre-owned watches for sale from verified sellers, or list your luxury watch with automated specifications and market-based pricing.' },
+    { num: '03', title: 'Connect with Buyers & Sellers',   desc: 'Connect directly with verified luxury watch dealers, collectors, buyers, and sellers to discuss watches, compare prices, and make offers.' },
+    { num: '04', title: 'Complete Your Luxury Watch Deal', desc: 'Agree on the price and transaction terms, then complete your pre-owned luxury watch deal directly with the buyer or seller.' },
   ];
 
   testimonials = [

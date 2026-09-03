@@ -14,15 +14,15 @@ export class FaqComponent {
   }
 
   readonly faqs = [
-    { q: 'Who can join Chronobay?',                              a: 'Chronobay is open to both professional watch dealers and serious private collectors. All members must complete our identity verification process before accessing the marketplace.' },
-    { q: 'How does the zero-commission model work?',             a: "We don't take any commission on transactions. Our revenue comes from optional premium membership features, not from cutting into your earnings — ever." },
-    { q: 'What is the identity verification process?',           a: 'Members verify their identity through UAE PASS integration. This ensures every member is a real, verifiable individual or business entity before they can list or purchase.' },
-    { q: 'How is market pricing data provided?',                 a: "We integrate with WatchCharts™, the industry's most trusted pricing database, to provide real-time market valuations and historical performance charts for all major references." },
-    { q: 'Is Chronobay available outside the UAE?',              a: 'Yes, Chronobay is accessible globally, though our primary focus is the UAE and GCC luxury watch market. Membership is available to verified collectors and dealers worldwide.' },
-    { q: 'How are disputes between buyers and sellers resolved?', a: 'Our team mediates disputes through a structured resolution process. All transactions are recorded and traceable, providing a clear audit trail for any issues that arise.' },
-    { q: 'Can I list watches without a price?',                  a: 'Yes, you can list watches as price on request, allowing interested buyers to reach out directly without a public listing price — ideal for rare or high-value pieces.' },
-    { q: 'Is there a mobile app?',                               a: 'Yes, Chronobay is available on both iOS (App Store) and Android (Google Play), providing the full marketplace experience — listings, offers, and messaging — on mobile.' },
-    { q: 'How does the reference number autofill work?',         a: 'Our system uses watch reference numbers to automatically populate listing details including model name, specifications, and historical pricing data, saving you significant time per listing.' },
-    { q: 'How do I apply for membership?',                       a: "Click Apply For Membership on this page, complete our verification process, and once approved you'll gain full access to the marketplace, listings, and direct messaging." },
+    { q: 'How can I sell my luxury watch?',                          a: 'Sell your luxury watches on ChronoBay by listing your timepiece, adding its details and pricing, and connecting directly with verified buyers.' },
+    { q: 'How can I buy pre-owned luxury watches online?',           a: 'You can buy pre-owned luxury watches online through ChronoBay, where you can discover watches from verified dealers and collectors, review market data, compare prices, and connect directly with sellers.' },
+    { q: 'How does ChronoBay protect buyers when buying luxury watches?', a: 'ChronoBay protects buyers primarily through a secure escrow service that holds payments until the buyer receives and accepts the watch.' },
+    { q: 'How does ChronoBay verify watches?',                       a: 'ChronoBay helps buyers verify luxury watches through identity-verified dealers and collectors, detailed watch information, and real-time market data before making a purchase.' },
+    { q: 'How much does ChronoBay charge to sell your watch?',       a: 'ChronoBay charges 0% commission on watch sales, so sellers keep 100% of the sale price with no transaction fees.' },
+    { q: 'What are the top 3 luxury watch brands available on ChronoBay?', a: 'The top three luxury watch brands by global sales, recognition, and market presence are Rolex, Rado, and Omega, all available on ChronoBay.' },
+    { q: 'How can I register as a dealer or collector on ChronoBay?', a: 'You can register as a dealer or collector by joining the ChronoBay Early Access list and completing the required identity verification process.' },
+    { q: 'Can I negotiate the price of a luxury watch on ChronoBay?', a: 'Yes, you can negotiate prices on ChronoBay. Many professional dealers and private collectors are open to discussing offers and negotiating prices directly with buyers before completing a deal.' },
+    { q: 'What does ChronoBay Buyer Protection cover?',              a: 'ChronoBay Buyer Protection covers buyers through secure escrow, with payment held until the buyer receives and accepts the watch.' },
+    { q: 'How do I check the market value of a watch?',             a: "To check the market value of a watch, use ChronoBay's real-time market data, current valuations, and historical price information for major watch references." },
   ];
 }
